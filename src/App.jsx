@@ -1,5 +1,6 @@
 import { Tooltip } from '@nextui-org/react';
 import { categories } from './data/categories';
+import { top } from './data/top';
 
 function App() {
   return (
@@ -24,6 +25,31 @@ function App() {
                     src={category.imageUrl}
                     alt={category.name}
                     className="object-cover w-full h-full"
+                  />
+                </div>
+              </div>
+            </Tooltip>
+          ))}
+        </div>
+
+        <br></br>
+
+        <h2 className="text-xl font-bold">Top Picks</h2>
+
+        <div className="flex flex-wrap justify-start items-center gap-3 mt-3">
+          {top.map((tops) => (
+            <Tooltip
+              key={tops.name}
+              content={tops.tooltip}
+              placement="bottom"
+              showArrow
+            >
+              <div className="flex flex-col items-center">
+                <div className="w-40 h-40 rounded-lg overflow-hidden bg-white shadow-md border border-gray-300">
+                  <img
+                    src={tops.imageUrl}
+                    alt={tops.name}
+                    className="object-cover w-40 h-40"
                   />
                 </div>
               </div>
