@@ -10,7 +10,7 @@ export const potraitsList = [
     artist: 'James Abbott McNeill Whistler',
   },
   {
-    name: "Whistler's Mother",
+    name: "Girl with A Pearl Earring",
     img: '/src/assets/portraits/JohannesVermeer/GirlwithAPearlEarring.jpg',
     artist: 'Johannes Vermeer',
   },
