@@ -1,5 +1,5 @@
 import { Tooltip } from '@nextui-org/react';
-import { categories } from './utils/constants/categories';
+import { categories } from './data/categories';
 
 function App() {
   return (
