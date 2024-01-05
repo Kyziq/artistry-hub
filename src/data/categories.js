@@ -1,7 +1,7 @@
-import Meules from '../../assets/images/paintings/ClaudeMonet/Meules.jpg';
-import StarryNight from '../../assets/images/landscapes/VincentVanGogh/StarryNight.jpg';
-import MonaLisa from '../../assets/images/portraits/LeonardoDaVinci/MonaLisa.jpg';
-import Interchange from '../../assets/images/abstracts/WillemDeKooming/Interchange.jpg';
+import Meules from '../assets/images/paintings/ClaudeMonet/Meules.jpg';
+import StarryNight from '../assets/images/landscapes/VincentVanGogh/StarryNight.jpg';
+import MonaLisa from '../assets/images/portraits/LeonardoDaVinci/MonaLisa.jpg';
+import Interchange from '../assets/images/abstracts/WillemDeKooming/Interchange.jpg';
 
 export const categories = [
   {

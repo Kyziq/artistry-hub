@@ -1,4 +1,4 @@
-import JohannesVermeer from '../../assets/images/artists/JohannesVermeer.jpg';
+import JohannesVermeer from '../assets/images/artists/JohannesVermeer.jpg';
 
 export const artists = [
   {
