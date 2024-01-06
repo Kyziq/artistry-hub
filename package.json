@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
-    "framer-motion": "^10.17.8",
+    "framer-motion": "^10.17.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -29,7 +29,7 @@
     "lint-staged": "^15.2.0",
     "postcss": "^8.4.33",
     "prettier": "3.1.1",
-    "tailwindcss": "^3.4.0",
+    "tailwindcss": "^3.4.1",
     "vite": "^5.0.11"
   },
   "lint-staged": {
@@ -38,5 +38,12 @@
       "prettier --write --ignore-unknown"
     ],
     "**/*": "prettier --write --ignore-unknown"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "prettier"
+    ]
   }
 }
