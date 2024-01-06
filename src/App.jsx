@@ -12,7 +12,8 @@ function App() {
 
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/test" element={<Test />} />
+          <Route exact path="/test" element={<Test />} />
+          {/* <Route component={GenericNotFound} /> */}
         </Routes>
 
         <Footer />
