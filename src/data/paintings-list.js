@@ -1,5 +1,6 @@
 import Meules from '../assets/paintings/ClaudeMonet/Meules.jpg';
 import LesDemoisellesdAvignon from '../assets/paintings/PabloPicasso/LesDemoisellesdAvignon.jpg';
+import { artists } from './artists-list.js';
 
 export const paintingsList = [
   {
@@ -12,6 +13,7 @@ export const paintingsList = [
     location: 'Private Collection',
     dimensions: '73 cm x 92.5cm',
     style: 'Impressionism',
+    artistInfo: artists['Claude Monet'] || {},
   },
   {
     name: "Les Demoiselles d'Avignon",
@@ -23,5 +25,6 @@ export const paintingsList = [
     location: 'Museum of Modern Art, New York City, USA',
     dimensions: '243.9 cm x 233.7 cm',
     style: 'Cubism',
+    artistInfo: artists['Pablo Picasso'] || {},
   },
 ];

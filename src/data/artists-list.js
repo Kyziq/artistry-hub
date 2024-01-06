@@ -1,7 +1,7 @@
 import JohannesVermeer from '../assets/images/artists/JohannesVermeer.jpg';
 
-export const artists = [
-  {
+export const artists = {
+  'Johannes Vermeer': {
     name: 'Johannes Vermeer',
     bio: 'Johannes Vermeer was a Dutch Baroque Period painter known for his masterly treatment and use of light in his work.',
     birthYear: 1632,
@@ -14,4 +14,4 @@ export const artists = [
     ],
     imageUrl: JohannesVermeer,
   },
-];
+};

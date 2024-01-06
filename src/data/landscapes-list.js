@@ -1,4 +1,5 @@
 import StarryNight from '../assets/landscapes/VincentVanGogh/StarryNight.jpg';
+import { artists } from './artists-list.js';
 
 export const landscapesList = [
   {
@@ -11,5 +12,6 @@ export const landscapesList = [
     location: 'Museum of Modern Art, New York City, USA',
     dimensions: '73.7 cm x 92.1 cm',
     style: 'Post-Impressionism',
+    artistInfo: artists['Vincent Van Gogh'] || {},
   },
 ];
