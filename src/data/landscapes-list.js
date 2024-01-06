@@ -1,4 +1,4 @@
-import StarryNight from '../assets/landscapes/VincentVanGogh/StarryNight.jpg';
+import StarryNight from '../assets/images/landscapes/VincentVanGogh/StarryNight.jpg';
 
 export const landscapesList = [
   {

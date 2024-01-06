@@ -1,5 +1,5 @@
-import FalseStart from '../assets/abstracts/JasperJohns/FalseStart.jpg';
-import Interchange from '../assets/abstracts/WillemDeKooming/Interchange.jpg';
+import FalseStart from '../assets/images/abstracts/JasperJohns/FalseStart.jpg';
+import Interchange from '../assets/images/abstracts/WillemDeKooming/Interchange.jpg';
 
 export const abstractsList = [
   {

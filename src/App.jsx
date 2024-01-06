@@ -1,10 +1,46 @@
 import { Tooltip } from '@nextui-org/react';
+import { useState, useEffect } from 'react';
 import { categories } from './data/categories';
-import { top } from './data/top';
+import { landscapesList } from './data/landscapes-list';
+import { paintingsList } from './data/paintings-list';
+import { portraitsList } from './data/portraits-list';
+import { abstractsList } from './data/abstracts-list';
+
+const shuffleArray = (array) => {
+  const shuffledArray = [...array];
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+};
 
 function App() {
+  // Combine data from landscapesList, paintingsList, and portraitsList
+  //const combinedList = [...landscapesList, ...paintingsList, ...portraitsList, ...abstractsList];
+
+  // Shuffle the combined list
+  //const shuffledList = shuffleArray(combinedList);
+
+  // State to hold the new list
+  const [newList, setNewList] = useState([]);
+
+  useEffect(() => {
+    // Combine and shuffle the lists when the component mounts
+    const combinedAndShuffledList = shuffleArray([
+      ...landscapesList,
+      ...paintingsList,
+      ...portraitsList,
+      ...abstractsList,
+    ]);
+    setNewList(combinedAndShuffledList);
+  }, []);
+
+  // Limit the number of items to show in the Top Picks section
+  const limitedTopPicksList = newList.slice(0, 7);
+
   return (
-    <div className="flex flex-col justify-start items-start min-h-screen bg-gray-100 p-10">
+    <div className="flex flex-col justify-start items-start min-h-screen bg-gray-100 p-10 overflow-hidden">
       <header className="text-2xl font-bold">ArtistryHub.</header>
       <p className="text-gray-700">Explore our world of creative designs.</p>
 
@@ -32,29 +68,31 @@ function App() {
           ))}
         </div>
 
-        <br></br>
+        <br />
 
-        <h2 className="text-xl font-bold">Top Picks</h2>
-
-        <div className="flex flex-wrap justify-start items-center gap-3 mt-3">
-          {top.map((tops) => (
-            <Tooltip
-              key={tops.name}
-              content={tops.tooltip}
-              placement="bottom"
-              showArrow
-            >
-              <div className="flex flex-col items-center">
-                <div className="w-40 h-40 rounded-lg overflow-hidden bg-white shadow-md border border-gray-300">
-                  <img
-                    src={tops.imageUrl}
-                    alt={tops.name}
-                    className="object-cover w-40 h-40"
-                  />
+        <div className="mt-5">
+          <h2 className="text-xl font-bold">Top Picks</h2>
+          <br></br>
+          <div className="top-picks-container flex overflow-x-auto">
+            {limitedTopPicksList.map((item) => (
+              <Tooltip
+                key={item.name}
+                content={'View ' + item.name}
+                placement="bottom"
+                showArrow
+              >
+                <div className="flex flex-col items-center mr-3">
+                  <div className="w-48 h-48 rounded-lg overflow-hidden bg-white shadow-md border border-gray-300">
+                    <img
+                      src={item.img}
+                      alt={item.name}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
                 </div>
-              </div>
-            </Tooltip>
-          ))}
+              </Tooltip>
+            ))}
+          </div>
         </div>
       </div>
     </div>
