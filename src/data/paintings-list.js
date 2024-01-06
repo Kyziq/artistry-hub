@@ -1,5 +1,5 @@
-import Meules from '../assets/paintings/ClaudeMonet/Meules.jpg';
-import LesDemoisellesdAvignon from '../assets/paintings/PabloPicasso/LesDemoisellesdAvignon.jpg';
+import Meules from '../assets/images/paintings/ClaudeMonet/Meules.jpg';
+import LesDemoisellesdAvignon from '../assets/images/paintings/PabloPicasso/LesDemoisellesdAvignon.jpg';
 import { artists } from './artists-list.js';
 
 export const paintingsList = [

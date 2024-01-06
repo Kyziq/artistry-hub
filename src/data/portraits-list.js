@@ -1,6 +1,6 @@
-import MonaLisa from '../assets/portraits/LeonardoDaVinci/MonaLisa.jpg';
-import WhistlersMother from '../assets/portraits/JamesAbbott/WhistlersMother.jpg';
-import GirlWithAPearlEarring from '../assets/portraits/JohannesVermeer/GirlWithAPearlEarring.jpg';
+import MonaLisa from '../assets/images/portraits/LeonardoDaVinci/MonaLisa.jpg';
+import WhistlersMother from '../assets/images/portraits/JamesAbbott/WhistlersMother.jpg';
+import GirlWithAPearlEarring from '../assets/images/portraits/JohannesVermeer/GirlWithAPearlEarring.jpg';
 import { artists } from './artists-list.js';
 
 export const portraitsList = [
