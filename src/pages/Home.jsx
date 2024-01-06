@@ -2,16 +2,15 @@ import { Tooltip, Image } from '@nextui-org/react';
 import { categories } from '../data/categories';
 
 const CategoryItem = ({ category }) => (
-  <Tooltip
-    key={category.name}
-    content={category.tooltip}
-    placement="top"
-    showArrow
-  >
+  <Tooltip content={category.tooltip} placement="top" showArrow>
     <div className="flex flex-col items-center">
-      <div className="w-24 h-24 rounded-full overflow-hidden bg-white shadow-md">
-        <Image isZoomed alt={category.name} src={category.imageUrl} />
-      </div>
+      <Image
+        src={category.imageUrl}
+        alt={category.name}
+        isZoomed
+        className="w-20 h-20"
+      />
+      <span className="mt-2 text-sm">{category.name}</span>
     </div>
   </Tooltip>
 );

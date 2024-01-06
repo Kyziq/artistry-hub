@@ -22,6 +22,6 @@ export const categories = [
   {
     name: 'Abstracts',
     imageUrl: Interchange,
-    tooltip: 'Discover Artworks',
+    tooltip: 'Discover Abstracts',
   },
 ];
