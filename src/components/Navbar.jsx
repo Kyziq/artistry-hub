@@ -8,12 +8,14 @@ import {
   Dropdown,
   DropdownMenu,
   Avatar,
+  Image,
 } from '@nextui-org/react';
 import { FaSearch } from 'react-icons/fa';
 
 const NavbarComponent = () => {
   return (
     <Navbar maxWidth={'full'} isBordered shouldHideOnScroll>
+      <Image src="/logo.png" alt="Logo" width={40} height={40} isZoomed />
       <NavbarContent justify="start">
         <NavbarBrand>
           <Input
