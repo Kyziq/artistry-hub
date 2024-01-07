@@ -14,11 +14,6 @@ const shuffleArray = (array) => {
   }
   return shuffledArray;
 };
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Test from './pages/Test';
-import Footer from './pages/Footer';
 
 function App() {
   // Combine data from landscapesList, paintingsList, and portraitsList
@@ -60,15 +55,9 @@ function App() {
     <div className="flex flex-col justify-start items-start min-h-screen bg-gray-100 p-10 overflow-hidden">
       <header className="text-2xl font-bold">ArtistryHub.</header>
       <p className="text-gray-700">Explore our world of creative designs.</p>
-    <div className="flex flex-col justify-start items-start min-h-screen">
-      <Router>
-        <Navbar />
 
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/test" element={<Test />} />
-          {/* <Route component={GenericNotFound} /> */}
-        </Routes>
+      <div className="mt-5">
+        <h2 className="text-xl font-bold">Categories</h2>
 
         <div className="flex flex-wrap justify-start items-center gap-4 mt-4">
           {categories.map((category) => (
@@ -170,8 +159,6 @@ function App() {
           </div>
         </div>
       </div>
-        <Footer />
-      </Router>
     </div>
   );
 }
