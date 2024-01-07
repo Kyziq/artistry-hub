@@ -22,7 +22,7 @@ const Home = () => {
       <p className="text-gray-700">Explore our world of creative designs.</p>
 
       <div className="mt-5">
-        <h2 className="text-xl font-bold">Categories</h2>
+        <h2 className="text-2xl font-bold">Categories</h2>
 
         <div className="flex flex-wrap justify-start items-center gap-4 mt-4">
           {categories.map((category) => (
