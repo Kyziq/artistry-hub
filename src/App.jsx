@@ -5,7 +5,7 @@ import Test from './pages/Test';
 import Footer from './components/Footer';
 function App() {
   return (
-    <div className="flex flex-col justify-start items-start min-h-screen bg-gray-100 overflow-hidden">
+    <div className="flex flex-col justify-start items-start min-h-screen bg-gray-100">
       <Router>
         <Navbar />
 
