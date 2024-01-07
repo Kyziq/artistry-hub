@@ -5,7 +5,7 @@ import { artists } from './artists-list.js';
 
 export const landscapesList = [
   {
-    id: 1,
+    id: 2001,
     name: 'Starry Night',
     img: StarryNight,
     artist: 'Vincent Van Gogh',
@@ -18,7 +18,7 @@ export const landscapesList = [
     artistInfo: artists['Vincent Van Gogh'] || {},
   },
   {
-    id: 2,
+    id: 2002,
     name: 'Mr and Mrs Andrews',
     img: MrAndMrsAndrews,
     artist: 'Thomas Gainsborough',
@@ -30,7 +30,7 @@ export const landscapesList = [
     style: 'Rococo',
   },
   {
-    id: 3,
+    id: 2003,
     name: 'The Blue Boy',
     img: TheBlueBoy,
     artist: 'Thomas Gainsborough',

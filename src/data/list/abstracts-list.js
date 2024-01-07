@@ -4,7 +4,7 @@ import { artists } from './artists-list';
 
 export const abstractsList = [
   {
-    id: 1,
+    id: 1001,
     name: 'False Start',
     img: FalseStart,
     artist: 'Jasper Johns',
@@ -17,7 +17,7 @@ export const abstractsList = [
     artistInfo: artists['Jasper Johns'] || {},
   },
   {
-    id: 2,
+    id: 1002,
     name: 'Interchange',
     img: Interchange,
     artist: 'Willem de Kooning',
