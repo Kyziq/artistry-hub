@@ -15,7 +15,7 @@ const CategoryItem = ({ category }) => (
         isZoomed
         className="w-20 h-20"
       />
-      <span className="mt-2 text-sm">{category.name}</span>
+      <span className="mt-2 text-xs">{category.name}</span>
     </div>
   </Tooltip>
 );
