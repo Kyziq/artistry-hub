@@ -1,6 +1,8 @@
 import Meules from '../assets/images/paintings/ClaudeMonet/Meules.jpg';
 import LesDemoisellesdAvignon from '../assets/images/paintings/PabloPicasso/LesDemoisellesdAvignon.jpg';
 import { artists } from './artists-list.js';
+import GadisPicnic from '../assets/images/paintings/MiriamOmar/GadisPicnic.png';
+import GardenOfJoy from '../assets/images/paintings/MiriamOmar/GardenOfJoy.png';
 
 export const paintingsList = [
   {
@@ -27,4 +29,26 @@ export const paintingsList = [
     style: 'Cubism',
     artistInfo: artists['Pablo Picasso'] || {},
   },
+  {
+    name: 'GardenOfJoy',
+    img: GardenOfJoy,
+    artist: 'Mariam Omar',
+    date: '2022',
+    description:
+    'Garden of Joy is part of a series of paintings by Miriam Omar that explore a flora theme, showcasing the beauty and diversity of botanical elements. The artwork captures the essence of nature through Miriam Omar\'s unique artistic perspective.',
+    location: 'Zhan Art Space',
+    dimensions: '20.1 cm x 20.1cm',
+    style: 'Floral',
+  },
+  {
+    name: 'GadisPicnic',
+    img: GadisPicnic,
+    artist: 'Mariam Omar',
+    date: '2022',
+    description:
+    'Gadis Picnic is part of a series of paintings by Miriam Omar that explore a flora theme, showcasing two Malaysian girls dressed in baju kurung as they enjoy a picnic under a tree. The artwork beautifully captures the cultural and natural elements, creating a serene and picturesque scene.',
+    location: 'Zhan Art Space',
+    dimensions: '15.1 cm x 20.1cm',
+    style: 'Floral',
+  }
 ];
