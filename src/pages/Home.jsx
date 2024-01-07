@@ -14,9 +14,9 @@ const CategoryItem = ({ category }) => (
         src={category.imageUrl}
         alt={category.name}
         isZoomed
-        className="w-20 h-20"
+        className="w-24 h-24"
       />
-      <span className="mt-2 text-xs">{category.name}</span>
+      <span className="mt-1 text-sm">{category.name}</span>
     </div>
   </Tooltip>
 );
