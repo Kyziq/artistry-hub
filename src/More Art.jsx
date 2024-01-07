@@ -8,7 +8,7 @@ import { MdIosShare } from "react-icons/md";
 import { TbDots } from "react-icons/tb";
 import { GoDownload } from "react-icons/go";
 import { MdOutlineReport } from "react-icons/md";
-export default function TopPicks() {
+export default function MoreArt() {
   const fixedWidth = '250px'; 
   const iconClasses = "text-xl text-default-500 pointer-events-none flex-shrink-0";
   const shareUrl = "http://github.com";
