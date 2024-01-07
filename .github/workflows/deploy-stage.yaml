@@ -16,25 +16,14 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '20'
-          cache: 'pnpm'
-
-      - name: Cache pnpm Store
-        uses: actions/cache@v1
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-
-
-      - name: Install pnpm
-        run: npm install -g pnpm
+          node-version: '16'
+          cache: 'npm'
 
       - name: Install Dependencies
-        run: pnpm install
+        run: npm install
 
       - name: Build Static Content
-        run: pnpm run build
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
