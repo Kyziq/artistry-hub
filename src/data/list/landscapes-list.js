@@ -1,6 +1,6 @@
-import StarryNight from '../assets/images/landscapes/VincentVanGogh/StarryNight.jpg';
-import MrAndMrsAndrews from '../assets/images/landscapes/ThomasGainsborough/MrAndMrsAndrews.jpg';
-import TheBlueBoy from '../assets/images/landscapes/ThomasGainsborough/TheBlueBoy.jpg';
+import StarryNight from '../../assets/images/landscapes/VincentVanGogh/StarryNight.jpg';
+import MrAndMrsAndrews from '../../assets/images/landscapes/ThomasGainsborough/MrAndMrsAndrews.jpg';
+import TheBlueBoy from '../../assets/images/landscapes/ThomasGainsborough/TheBlueBoy.jpg';
 import { artists } from './artists-list.js';
 
 export const landscapesList = [

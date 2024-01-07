@@ -1,7 +1,7 @@
-import Meules from '../assets/images/paintings/ClaudeMonet/Meules.jpg';
-import LesDemoisellesdAvignon from '../assets/images/paintings/PabloPicasso/LesDemoisellesdAvignon.jpg';
-import GadisPicnic from '../assets/images/paintings/MiriamOmar/GadisPicnic.png';
-import GardenOfJoy from '../assets/images/paintings/MiriamOmar/GardenOfJoy.png';
+import Meules from '../../assets/images/paintings/ClaudeMonet/Meules.jpg';
+import LesDemoisellesdAvignon from '../../assets/images/paintings/PabloPicasso/LesDemoisellesdAvignon.jpg';
+import GadisPicnic from '../../assets/images/paintings/MiriamOmar/GadisPicnic.png';
+import GardenOfJoy from '../../assets/images/paintings/MiriamOmar/GardenOfJoy.png';
 import { artists } from './artists-list.js';
 
 export const paintingsList = [

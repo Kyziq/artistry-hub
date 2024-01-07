@@ -1,6 +1,6 @@
-import JohannesVermeer from '../assets/images/artists/JohannesVermeer.jpeg';
-import MiriamOmar from '../assets/images/artists/MiriamOmar.png';
-import ThomasGainsborough from '../assets/images/artists/ThomasGainsborough.jpg';
+import JohannesVermeer from '../../assets/images/artists/JohannesVermeer.jpeg';
+import MiriamOmar from '../../assets/images/artists/MiriamOmar.png';
+import ThomasGainsborough from '../../assets/images/artists/ThomasGainsborough.jpg';
 
 export const artists = {
   'Johannes Vermeer': {
