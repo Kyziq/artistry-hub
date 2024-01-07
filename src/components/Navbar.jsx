@@ -113,8 +113,8 @@ const UserProfileDropdown = () => (
 const NavbarComponent = () => {
   return (
     <Navbar maxWidth={'full'} isBordered shouldHideOnScroll>
-      <Link to="/" reloadDocument>
-        <Image src="/logo.png" alt="Logo" width={40} height={40} isZoomed />
+      <Link to="/artistry-hub/" reloadDocument>
+        <Image src="./logo.png" alt="Logo" width={40} height={40} isZoomed />
       </Link>
       <NavbarContent justify="start">
         <NavbarBrand>

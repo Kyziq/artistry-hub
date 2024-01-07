@@ -10,7 +10,7 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/artistry-hub/" element={<Home />} />
           <Route exact path="/test" element={<Test />} />
           {/* <Route component={GenericNotFound} /> */}
         </Routes>
