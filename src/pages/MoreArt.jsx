@@ -89,20 +89,14 @@ export default function MoreArt() {
                     </Button>
                   </div>
                 </CardHeader>
-
-                <CardBody className="p-0">
-                  <div className="relative aspect-w-1 aspect-h-1 overflow-hidden">
-                    <Image
+                <Image
                       removeWrapper
                       shadow="sm"
                       radius="lg"
                       alt={item.name}
                       className="object-cover w-full h-full"
                       src={item.img}
-                    />
-                  </div>
-                </CardBody>
-                
+                />
                 <CardFooter className="justify-between before:bg-white/10  overflow-hidden py-1 absolute before:rounded-sm rounded-small bottom-1 w-[calc(100%_-_5px)] shadow-small ml-1 z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <div className="flex gap-4 items-center">
                   <Dropdown backdrop="blur">
