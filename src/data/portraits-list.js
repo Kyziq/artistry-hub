@@ -1,6 +1,7 @@
 import MonaLisa from '../assets/images/portraits/LeonardoDaVinci/MonaLisa.jpg';
 import WhistlersMother from '../assets/images/portraits/JamesAbbott/WhistlersMother.jpg';
 import GirlWithAPearlEarring from '../assets/images/portraits/JohannesVermeer/GirlWithAPearlEarring.jpg';
+import { artists } from './artists-list.js';
 
 export const portraitsList = [
   {
@@ -13,6 +14,7 @@ export const portraitsList = [
     location: 'Louvre Museum, Paris, France',
     dimensions: '77 cm x 53 cm',
     style: 'Renaissance',
+    artistInfo: artists['Leonardo Da Vinci'] || {},
   },
   {
     name: "Whistler's Mother",
@@ -24,6 +26,7 @@ export const portraitsList = [
     location: "Musée d'Orsay, Paris, France",
     dimensions: '144.3 cm x 162.5 cm',
     style: 'Realism',
+    artistInfo: artists['James Abbott McNeill Whistler'] || {},
   },
   {
     name: 'Girl with a Pearl Earring',
@@ -34,5 +37,6 @@ export const portraitsList = [
     location: 'Mauritshuis, The Hague, Netherlands',
     dimensions: '44.5 cm x 39 cm',
     style: 'Baroque',
+    artistInfo: artists['Johannes Vermeer'] || {},
   },
 ];

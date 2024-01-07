@@ -1,5 +1,6 @@
 import FalseStart from '../assets/images/abstracts/JasperJohns/FalseStart.jpg';
 import Interchange from '../assets/images/abstracts/WillemDeKooming/Interchange.jpg';
+import { artists } from './artists-list';
 
 export const abstractsList = [
   {
@@ -12,6 +13,7 @@ export const abstractsList = [
     location: 'Private Collection',
     dimensions: '170.2 cm x 137.2 cm',
     style: 'Abstract Expressionism',
+    artistInfo: artists['Jasper Johns'] || {},
   },
   {
     name: 'Interchange',
@@ -23,5 +25,6 @@ export const abstractsList = [
     location: 'Private Collection',
     dimensions: '200.7 cm x 175.3 cm',
     style: 'Abstract Expressionism',
+    artistInfo: artists['Willem de Kooning'] || {},
   },
 ];
