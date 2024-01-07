@@ -1,7 +1,7 @@
-import { paintingsList } from './paintings-list.js';
-import { landscapesList } from './landscapes-list.js';
-import { portraitsList } from './portraits-list.js';
-import { abstractsList } from './abstracts-list.js';
+import { paintingsList } from './list/paintings-list.js';
+import { landscapesList } from './list/landscapes-list.js';
+import { portraitsList } from './list/portraits-list.js';
+import { abstractsList } from './list/abstracts-list.js';
 
 function getRandomItem(list) {
   return list[Math.floor(Math.random() * list.length)];

@@ -5,6 +5,7 @@ import { artists } from './artists-list.js';
 
 export const portraitsList = [
   {
+    id: 1,
     name: 'Mona Lisa',
     img: MonaLisa,
     artist: 'Leonardo Da Vinci',
@@ -17,6 +18,7 @@ export const portraitsList = [
     artistInfo: artists['Leonardo Da Vinci'] || {},
   },
   {
+    id: 2,
     name: "Whistler's Mother",
     img: WhistlersMother,
     artist: 'James Abbott McNeill Whistler',
@@ -29,11 +31,13 @@ export const portraitsList = [
     artistInfo: artists['James Abbott McNeill Whistler'] || {},
   },
   {
+    id: 3,
     name: 'Girl with a Pearl Earring',
     img: GirlWithAPearlEarring,
     artist: 'Johannes Vermeer',
     date: '1665',
-    description: '',
+    description:
+      'Girl with a Pearl Earring, also known as the "Dutch Mona Lisa", is a 17th-century masterpiece by Johannes Vermeer. This exquisite work is renowned for its subtle use of light and shadow, which masterfully captures the enigmatic expression and beauty of the young woman depicted. The artwork is celebrated for its vivid portrayal and meticulous attention to detail, making it a standout example of the Baroque style. Its intriguing subject and Vermeer\'s renowned technique have made it a beloved and highly revered work in art history.',
     location: 'Mauritshuis, The Hague, Netherlands',
     dimensions: '44.5 cm x 39 cm',
     style: 'Baroque',

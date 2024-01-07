@@ -6,6 +6,7 @@ import { artists } from './artists-list.js';
 
 export const paintingsList = [
   {
+    id: 1,
     name: 'Meules',
     img: Meules,
     artist: 'Claude Monet',
@@ -18,6 +19,7 @@ export const paintingsList = [
     artistInfo: artists['Claude Monet'] || {},
   },
   {
+    id: 2,
     name: "Les Demoiselles d'Avignon",
     img: LesDemoisellesdAvignon,
     artist: 'Pablo Picasso',
@@ -30,25 +32,27 @@ export const paintingsList = [
     artistInfo: artists['Pablo Picasso'] || {},
   },
   {
-    name: 'GardenOfJoy',
+    id: 3,
+    name: 'Garden Of Joy',
     img: GardenOfJoy,
     artist: 'Mariam Omar',
     date: '2022',
     description:
-    'Garden of Joy is part of a series of paintings by Miriam Omar that explore a flora theme, showcasing the beauty and diversity of botanical elements. The artwork captures the essence of nature through Miriam Omar\'s unique artistic perspective.',
+      "Garden of Joy is part of a series of paintings by Miriam Omar that explore a flora theme, showcasing the beauty and diversity of botanical elements. The artwork captures the essence of nature through Miriam Omar's unique artistic perspective.",
     location: 'Zhan Art Space',
     dimensions: '20.1 cm x 20.1cm',
     style: 'Floral',
   },
   {
-    name: 'GadisPicnic',
+    id: 4,
+    name: 'Gadis Picnic',
     img: GadisPicnic,
     artist: 'Mariam Omar',
     date: '2022',
     description:
-    'Gadis Picnic is part of a series of paintings by Miriam Omar that explore a flora theme, showcasing two Malaysian girls dressed in baju kurung as they enjoy a picnic under a tree. The artwork beautifully captures the cultural and natural elements, creating a serene and picturesque scene.',
+      'Gadis Picnic is part of a series of paintings by Miriam Omar that explore a flora theme, showcasing two Malaysian girls dressed in baju kurung as they enjoy a picnic under a tree. The artwork beautifully captures the cultural and natural elements, creating a serene and picturesque scene.',
     location: 'Zhan Art Space',
     dimensions: '15.1 cm x 20.1cm',
     style: 'Floral',
-  }
+  },
 ];
