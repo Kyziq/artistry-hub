@@ -57,7 +57,7 @@ export default function MoreArt() {
 
   return (
     <div className="mt-5">
-      <h2 className="text-xl font-bold">More Arts</h2>
+      <h2 className="text-2xl font-bold">More Arts</h2>
       <div className="flex flex-wrap justify-start items-center gap-4 mt-4">
         {Object.values(allLists).map((categoryList, categoryIndex) => (
           <div key={categoryIndex} className="flex gap-4 flex-wrap">

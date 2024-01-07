@@ -5,6 +5,7 @@ import { landscapesList } from '../data/list/landscapes-list';
 import { paintingsList } from '../data/list/paintings-list';
 import { portraitsList } from '../data/list/portraits-list';
 import { abstractsList } from '../data/list/abstracts-list';
+import MoreArt from './MoreArt';
 
 const CategoryItem = ({ category }) => (
   <Tooltip content={category.tooltip} placement="top" showArrow>
@@ -85,6 +86,9 @@ const Home = () => {
             </Tooltip>
           ))}
         </div>
+      </div>
+      <div className="mt-5">
+        <MoreArt />
       </div>
     </div>
   );
