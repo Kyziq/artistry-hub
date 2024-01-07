@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Test from './pages/Test';
 import Footer from './pages/Footer';
+import MoreArt from './pages/MoreArt';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           {/* <Route component={GenericNotFound} /> */}
         </Routes>
       </Router>
-
+      <MoreArt />
       <Footer />
     </div>
   );
