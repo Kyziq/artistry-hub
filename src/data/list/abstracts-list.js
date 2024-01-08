@@ -15,6 +15,7 @@ export const abstractsList = [
     dimensions: '170.2 cm x 137.2 cm',
     style: 'Abstract Expressionism',
     artistInfo: artists['Jasper Johns'] || {},
+    likes: 1,
   },
   {
     id: 1002,
@@ -28,5 +29,6 @@ export const abstractsList = [
     dimensions: '200.7 cm x 175.3 cm',
     style: 'Abstract Expressionism',
     artistInfo: artists['Willem de Kooning'] || {},
+    likes: 3,
   },
 ];

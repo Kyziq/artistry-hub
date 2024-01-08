@@ -20,6 +20,7 @@ export const portraitsList = [
     dimensions: '77 cm x 53 cm',
     style: 'Renaissance',
     artistInfo: artists['Leonardo Da Vinci'] || {},
+    likes: 36,
   },
   {
     id: 4002,
@@ -33,6 +34,7 @@ export const portraitsList = [
     dimensions: '144.3 cm x 162.5 cm',
     style: 'Realism',
     artistInfo: artists['James Abbott McNeill Whistler'] || {},
+    likes: 24,
   },
   {
     id: 4003,
@@ -46,6 +48,7 @@ export const portraitsList = [
     dimensions: '44.5 cm x 39 cm',
     style: 'Baroque',
     artistInfo: artists['Johannes Vermeer'] || {},
+    likes: 19,
   },
   {
     id: 4004,
@@ -59,6 +62,7 @@ export const portraitsList = [
     dimensions: '180 cm x 180 cm',
     style: 'Symbolism, Art Nouveau',
     artistInfo: artists['Gustav Klimt'] || {},
+    likes: 2,
   },
   {
     id: 4005,
@@ -72,6 +76,7 @@ export const portraitsList = [
     dimensions: '138 cm x 138 cm',
     style: 'Symbolism, Art Nouveau',
     artistInfo: artists['Gustav Klimt'] || {},
+    likes: 13,
   },
   {
     id: 4006,
@@ -85,6 +90,7 @@ export const portraitsList = [
     dimensions: '82.2 cm x 60 cm',
     style: 'Northern Renaissance',
     artistInfo: artists['Jan Van Eyck'] || {},
+    likes: 11,
   },
   {
     id: 4007,
@@ -98,5 +104,6 @@ export const portraitsList = [
     dimensions: '98.4 cm x 74.8 cm',
     style: 'Romanticism',
     artistInfo: artists['Caspar David Friedrich'] || {},
+    likes: 10,
   },
 ];
