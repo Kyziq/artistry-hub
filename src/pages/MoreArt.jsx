@@ -5,7 +5,6 @@ import {
   DropdownTrigger,
   DropdownMenu,
   DropdownItem,
-  cn,
 } from '@nextui-org/react';
 import {
   FacebookIcon,
@@ -60,7 +59,7 @@ export default function MoreArt() {
                 shadow="sm"
                 isPressable
                 onPress={() => console.log('item pressed')}
-                className="relative overflow-hidden inline-block group"
+                className="relative overflow-hidden inline-block group transition-opacity duration-300 hover:opacity-90"
                 style={{
                   margin: '0 0 1.5em',
                   width: fixedWidth,
@@ -69,7 +68,9 @@ export default function MoreArt() {
               >
                 <CardHeader className="absolute z-10 top-1 flex-col !items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex justify-between items-center w-full">
-                    <span className="text-sm font-medium">Header Tumblr</span>
+                    <span className="text-sm font-medium text-white">
+                      Header Tumblr
+                    </span>
                     <Button
                       className={
                         savedStates[index]
@@ -176,13 +177,9 @@ export default function MoreArt() {
                           Download image
                         </DropdownItem>
                         <DropdownItem
-                          key="copy"
-                          className="text-danger"
-                          startContent={
-                            <MdOutlineReport
-                              className={cn(iconClasses, 'text-danger')}
-                            />
-                          }
+                          key="logout"
+                          color="danger"
+                          startContent={<MdOutlineReport />}
                         >
                           Report
                         </DropdownItem>
