@@ -5,7 +5,7 @@ import { artists } from './artists-list.js';
 
 export const portraitsList = [
   {
-    id: 1,
+    id: 4001,
     name: 'Mona Lisa',
     img: MonaLisa,
     artist: 'Leonardo Da Vinci',
@@ -18,7 +18,7 @@ export const portraitsList = [
     artistInfo: artists['Leonardo Da Vinci'] || {},
   },
   {
-    id: 2,
+    id: 4002,
     name: "Whistler's Mother",
     img: WhistlersMother,
     artist: 'James Abbott McNeill Whistler',
@@ -31,7 +31,7 @@ export const portraitsList = [
     artistInfo: artists['James Abbott McNeill Whistler'] || {},
   },
   {
-    id: 3,
+    id: 4003,
     name: 'Girl with a Pearl Earring',
     img: GirlWithAPearlEarring,
     artist: 'Johannes Vermeer',

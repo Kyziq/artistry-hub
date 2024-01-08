@@ -6,7 +6,7 @@ import { artists } from './artists-list.js';
 
 export const paintingsList = [
   {
-    id: 1,
+    id: 3001,
     name: 'Meules',
     img: Meules,
     artist: 'Claude Monet',
@@ -19,7 +19,7 @@ export const paintingsList = [
     artistInfo: artists['Claude Monet'] || {},
   },
   {
-    id: 2,
+    id: 3002,
     name: "Les Demoiselles d'Avignon",
     img: LesDemoisellesdAvignon,
     artist: 'Pablo Picasso',
@@ -32,7 +32,7 @@ export const paintingsList = [
     artistInfo: artists['Pablo Picasso'] || {},
   },
   {
-    id: 3,
+    id: 3003,
     name: 'Garden Of Joy',
     img: GardenOfJoy,
     artist: 'Mariam Omar',
@@ -44,7 +44,7 @@ export const paintingsList = [
     style: 'Floral',
   },
   {
-    id: 4,
+    id: 3004,
     name: 'Gadis Picnic',
     img: GadisPicnic,
     artist: 'Mariam Omar',

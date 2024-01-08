@@ -13,13 +13,12 @@ import {
 } from '@nextui-org/react';
 import { Link } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
-import { abstractsList } from '../data/list';
-import { matchSorter } from 'match-sorter';
+import { allLists } from '../data/list';
 
-const sortedAbstractsList = matchSorter(abstractsList, '', { keys: ['name'] });
-const SearchAutocomplete = () => (
+const SearchAutocomplete = ({ allLists }) => (
   <Autocomplete
-    defaultItems={sortedAbstractsList}
+    defaultItems={allLists}
+    aria-label="Search for Artworks"
     classNames={{
       base: 'max-w-lg',
       listboxWrapper: 'max-h-[320px]',
@@ -111,14 +110,16 @@ const UserProfileDropdown = () => (
 );
 
 const NavbarComponent = () => {
+  const allItems = Object.values(allLists).flat();
+  const sortedAllList = allItems.sort((a, b) => a.name.localeCompare(b.name));
   return (
     <Navbar maxWidth={'full'} isBordered shouldHideOnScroll>
-      <Link to="/" reloadDocument>
-        <Image src="/logo.png" alt="Logo" width={40} height={40} isZoomed />
+      <Link to="/artistry-hub/" reloadDocument>
+        <Image src="./logo.png" alt="Logo" width={40} height={40} isZoomed />
       </Link>
       <NavbarContent justify="start">
         <NavbarBrand>
-          <SearchAutocomplete />
+          <SearchAutocomplete allLists={sortedAllList} />
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent as="div" className="items-center" justify="end">
