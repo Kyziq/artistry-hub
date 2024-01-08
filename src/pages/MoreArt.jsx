@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  Image,
-  Button,
-  CardFooter,
-} from '@nextui-org/react';
+import { Card, CardHeader, Image, Button, CardFooter } from '@nextui-org/react';
 import {
   Dropdown,
   DropdownTrigger,
@@ -78,125 +71,124 @@ export default function MoreArt() {
                   <div className="flex justify-between items-center w-full">
                     <span className="text-sm font-medium">Header Tumblr</span>
                     <Button
-                      className={savedStates[index] ? "bg-black text-white border-default-200" : ""}
+                      className={
+                        savedStates[index]
+                          ? 'bg-black text-white border-default-200'
+                          : ''
+                      }
                       color="danger"
                       radius="full"
                       size="sm"
-                      variant={savedStates[index] ? "bordered" : "solid" }
+                      variant={savedStates[index] ? 'bordered' : 'solid'}
                       onPress={() => toggleSaveState(index)}
                     >
-                      {savedStates[index] ? "Saved" : "Save"}
+                      {savedStates[index] ? 'Saved' : 'Save'}
                     </Button>
                   </div>
                 </CardHeader>
                 <Image
-                      removeWrapper
-                      shadow="sm"
-                      radius="lg"
-                      alt={item.name}
-                      className="object-cover w-full h-full"
-                      src={item.img}
+                  removeWrapper
+                  shadow="sm"
+                  radius="lg"
+                  alt={item.name}
+                  className="object-cover -z-1 w-full h-full"
+                  src={item.img}
                 />
                 <CardFooter className="justify-between before:bg-white/10  overflow-hidden py-1 absolute before:rounded-sm rounded-small bottom-1 w-[calc(100%_-_5px)] shadow-small ml-1 z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <div className="flex gap-4 items-center">
-                  <Dropdown backdrop="blur">
-                    <DropdownTrigger>
-                      <Button size = "sm" className="p-1">
-                        <MdIosShare className={`${iconClasses} text-sm`} />
-                      </Button>
-                    </DropdownTrigger>
-                    <DropdownMenu variant="faded" aria-label="Static Actions">
-                      <DropdownItem key="facebook" className="cursor-pointer">
-                        <FacebookShareButton
-                          url={shareUrl}
-                          title={title}
-                          className="Demo__some-network__share-button flex items-center"
-                        >
-                          <FacebookIcon size={32} round />
-                          <span className="ml-2">Facebook</span>
-                        </FacebookShareButton>
-                      </DropdownItem>
+                    <Dropdown backdrop="blur">
+                      <DropdownTrigger>
+                        <Button size="sm" className="p-1">
+                          <MdIosShare className={`${iconClasses} text-sm`} />
+                        </Button>
+                      </DropdownTrigger>
+                      <DropdownMenu variant="faded" aria-label="Static Actions">
+                        <DropdownItem key="facebook" className="cursor-pointer">
+                          <FacebookShareButton
+                            url={shareUrl}
+                            title={title}
+                            className="Demo__some-network__share-button flex items-center"
+                          >
+                            <FacebookIcon size={32} round />
+                            <span className="ml-2">Facebook</span>
+                          </FacebookShareButton>
+                        </DropdownItem>
 
-                      <DropdownItem key="whatsapp" className="cursor-pointer">
-                        <WhatsappShareButton
-                          url={shareUrl}
-                          title={title}
-                          className="Demo__some-network__share-button flex items-center"
-                        >
-                          <WhatsappIcon size={32} round />
-                          <span className="ml-2">Whatsapp</span>
-                        </WhatsappShareButton>
-                      </DropdownItem>
+                        <DropdownItem key="whatsapp" className="cursor-pointer">
+                          <WhatsappShareButton
+                            url={shareUrl}
+                            title={title}
+                            className="Demo__some-network__share-button flex items-center"
+                          >
+                            <WhatsappIcon size={32} round />
+                            <span className="ml-2">Whatsapp</span>
+                          </WhatsappShareButton>
+                        </DropdownItem>
 
-                      <DropdownItem key="x" className="cursor-pointer">
-                        <TwitterShareButton
-                          url={shareUrl}
-                          title={title}
-                          className="Demo__some-network__share-button flex items-center"
-                        >
-                          <XIcon size={32} round />
-                          <span className="ml-2">Twitter</span>
-                        </TwitterShareButton>
-                      </DropdownItem>
+                        <DropdownItem key="x" className="cursor-pointer">
+                          <TwitterShareButton
+                            url={shareUrl}
+                            title={title}
+                            className="Demo__some-network__share-button flex items-center"
+                          >
+                            <XIcon size={32} round />
+                            <span className="ml-2">Twitter</span>
+                          </TwitterShareButton>
+                        </DropdownItem>
 
-                      <DropdownItem key="reddit" className="cursor-pointer">
-                        <RedditShareButton
-                          url={shareUrl}
-                          title={title}
-                          className="Demo__some-network__share-button flex items-center"
-                        >
-                          <RedditIcon size={32} round />
-                          <span className="ml-2">Reddit</span>
-                        </RedditShareButton>
-                      </DropdownItem>
-                      <DropdownItem key="email" className="cursor-pointer">
-                        <EmailShareButton
-                          url={shareUrl}
-                          title={title}
-                          className="Demo__some-network__share-button flex items-center"
-                        >
-                          <EmailIcon size={32} round />
-                          <span className="ml-2">Email </span>
-                        </EmailShareButton>
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </Dropdown>
+                        <DropdownItem key="reddit" className="cursor-pointer">
+                          <RedditShareButton
+                            url={shareUrl}
+                            title={title}
+                            className="Demo__some-network__share-button flex items-center"
+                          >
+                            <RedditIcon size={32} round />
+                            <span className="ml-2">Reddit</span>
+                          </RedditShareButton>
+                        </DropdownItem>
+                        <DropdownItem key="email" className="cursor-pointer">
+                          <EmailShareButton
+                            url={shareUrl}
+                            title={title}
+                            className="Demo__some-network__share-button flex items-center"
+                          >
+                            <EmailIcon size={32} round />
+                            <span className="ml-2">Email </span>
+                          </EmailShareButton>
+                        </DropdownItem>
+                      </DropdownMenu>
+                    </Dropdown>
 
-                  <Dropdown>
-                    <DropdownTrigger>
-                      <Button size = "sm" className="p-1">
-                        <TbDots className={`${iconClasses} text-sm`} />
-                      </Button>
-                    </DropdownTrigger>
-                    <DropdownMenu
-                      variant="faded"
-                      aria-label="Dropdown menu with icons"
-                    >
-                      <DropdownItem
-                      onClick={() =>
-                        handleDownload(item.img, item.name)
-                      }
-                        startContent={
-                          <GoDownload className={iconClasses} />
-                        }
+                    <Dropdown>
+                      <DropdownTrigger>
+                        <Button size="sm" className="p-1">
+                          <TbDots className={`${iconClasses} text-sm`} />
+                        </Button>
+                      </DropdownTrigger>
+                      <DropdownMenu
+                        variant="faded"
+                        aria-label="Dropdown menu with icons"
                       >
-                        Download image
-                      </DropdownItem>
-                      <DropdownItem
-                        key="copy"
-                        className="text-danger"
-                        startContent={
-                          <MdOutlineReport
-                            className={cn(iconClasses, 'text-danger')}
-                          />
-                        }
-                      >
-                        Report
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </Dropdown>
+                        <DropdownItem
+                          onClick={() => handleDownload(item.img, item.name)}
+                          startContent={<GoDownload className={iconClasses} />}
+                        >
+                          Download image
+                        </DropdownItem>
+                        <DropdownItem
+                          key="copy"
+                          className="text-danger"
+                          startContent={
+                            <MdOutlineReport
+                              className={cn(iconClasses, 'text-danger')}
+                            />
+                          }
+                        >
+                          Report
+                        </DropdownItem>
+                      </DropdownMenu>
+                    </Dropdown>
                   </div>
-                  
                 </CardFooter>
               </Card>
             ))}
