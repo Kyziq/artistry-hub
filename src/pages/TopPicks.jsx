@@ -1,38 +1,26 @@
 import { Tooltip } from '@nextui-org/react';
-import { landscapesList } from '../data/list/landscapes-list';
-import { paintingsList } from '../data/list/paintings-list';
-import { portraitsList } from '../data/list/portraits-list';
-import { abstractsList } from '../data/list/abstracts-list';
+import { allLists } from '../data/list';
 
 const Top = () => {
-  // Combine all lists
-  const combinedList = [
-    ...landscapesList,
-    ...paintingsList,
-    ...portraitsList,
-    ...abstractsList,
-  ];
-
-  // Sort the combined list based on the "likes" attribute in descending order
-  const sortedList = combinedList.sort((a, b) => b.likes - a.likes);
-
-  // Limit the number of items to show in the Top Picks section
-  const limitedTopPicksList = sortedList.slice(0, 18);
+  // Combine all lists and sort by 'likes' in descending order
+  const sortedList = Object.values(allLists)
+    .flat()
+    .sort((a, b) => b.likes - a.likes)
+    .slice(0, 18); // Limit to top 18 items
 
   return (
     <div className="p-6">
       <header className="text-2xl font-bold">ArtistryHub.</header>
-      <p className="text-gray-700">Explore our world of creative designs.</p>
 
       <div className="mt-5">
-        <h2 className="text-2xl font-bold">Top Picks</h2>
-        <br />
+        <h2 className="text-xl font-semibold mb-4">Top Picks</h2>
         <div className="top-picks-container flex flex-wrap overflow-x-auto">
-          {limitedTopPicksList.map((item) => (
+          {sortedList.map((item) => (
             <Tooltip
               key={item.name}
-              content={'View ' + item.name}
+              content={item.name}
               placement="bottom"
+              color="foreground"
               showArrow
             >
               <div className="flex flex-col items-center mr-3 mb-3">
