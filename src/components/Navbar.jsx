@@ -121,8 +121,6 @@ const NavbarComponent = () => {
         <NavbarBrand>
           <SearchAutocomplete allLists={sortedAllList} />
         </NavbarBrand>
-      </NavbarContent>
-      <NavbarContent as="div" className="items-center" justify="end">
         <UserProfileDropdown />
       </NavbarContent>
     </Navbar>
