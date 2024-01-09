@@ -16,6 +16,7 @@ export const landscapesList = [
     dimensions: '73.7 cm x 92.1 cm',
     style: 'Post-Impressionism',
     artistInfo: artists['Vincent Van Gogh'] || {},
+    likes: 6,
   },
   {
     id: 2002,
@@ -28,6 +29,7 @@ export const landscapesList = [
     location: 'Private Collection',
     dimensions: '69.8 cm x 119.4 cm',
     style: 'Rococo',
+    likes: 9,
   },
   {
     id: 2003,
@@ -41,5 +43,6 @@ export const landscapesList = [
       'Huntington Library, Art Museum, and Botanical Gardens, California',
     dimensions: '178 cm x 122 cm',
     style: 'Rococo',
+    likes: 5,
   },
 ];

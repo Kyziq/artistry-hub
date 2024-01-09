@@ -22,6 +22,7 @@ export const paintingsList = [
     dimensions: '73 cm x 92.5cm',
     style: 'Impressionism',
     artistInfo: artists['Claude Monet'] || {},
+    likes: 13,
   },
   {
     id: 3002,
@@ -35,6 +36,7 @@ export const paintingsList = [
     dimensions: '243.9 cm x 233.7 cm',
     style: 'Cubism',
     artistInfo: artists['Pablo Picasso'] || {},
+    likes: 19,
   },
   {
     id: 3003,
@@ -48,6 +50,7 @@ export const paintingsList = [
     dimensions: '20.1 cm x 20.1cm',
     style: 'Floral',
     artistInfo: artists['Mariam Omar'] || {},
+    likes: 8,
   },
   {
     id: 3004,
@@ -61,6 +64,7 @@ export const paintingsList = [
     dimensions: '15.1 cm x 20.1cm',
     style: 'Floral',
     artistInfo: artists['Mariam Omar'] || {},
+    likes: 11,
   },
   {
     id: 3005,
@@ -74,6 +78,7 @@ export const paintingsList = [
     dimensions: '78 cm x 78 cm',
     style: 'Symbolism, Art Nouveau',
     artistInfo: artists['Gustav Klimt'] || {},
+    likes: 18,
   },
   {
     id: 3006,
@@ -87,6 +92,7 @@ export const paintingsList = [
     dimensions: '84.1 cm x 152.4 cm',
     style: 'American Realism',
     artistInfo: artists['Edward Hopper'] || {},
+    likes: 6,
   },
   {
     id: 3007,
@@ -100,6 +106,7 @@ export const paintingsList = [
     dimensions: '71.4 cm x 91.4 cm',
     style: 'American Realism',
     artistInfo: artists['Edward Hopper'] || {},
+    likes: 2,
   },
   {
     id: 3008,
@@ -113,6 +120,7 @@ export const paintingsList = [
     dimensions: '71.4 cm x 102.2 cm',
     style: 'American Realism',
     artistInfo: artists['Edward Hopper'] || {},
+    likes: 1,
   },
   {
     id: 3009,
@@ -126,5 +134,6 @@ export const paintingsList = [
     dimensions: '365 cm x 260 cm (when opened)',
     style: 'Northern Renaissance',
     artistInfo: artists['Jan Van Eyck'] || {},
+    likes: 0,
   },
 ];
