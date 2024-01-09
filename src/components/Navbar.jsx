@@ -102,7 +102,7 @@ const UserProfileDropdown = () => (
       <DropdownItem key="notificaitons">Notifications</DropdownItem>
       <DropdownItem key="help_and_support">Help & Support</DropdownItem>
       <DropdownItem key="feedback">Feedback</DropdownItem>
-      <DropdownItem key="logout" color="danger">
+      <DropdownItem key="logout" color="danger" className="text-danger">
         Log Out
       </DropdownItem>
     </DropdownMenu>
