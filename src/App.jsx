@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Test from './pages/Test';
 import Footer from './components/Footer';
 import ErrorPage from './pages/Error';
 import TopPicks from './pages/TopPicks';
@@ -14,7 +13,6 @@ function App() {
 
         <Routes>
           <Route exact path="/artistry-hub/" element={<Home />} />
-          <Route exact path="/artistry-hub/test" element={<Test />} />
           <Route exact path="/artistry-hub/top-picks" element={<TopPicks />} />
           {/* <Route component={GenericNotFound} /> */}
           <Route path="*" element={<ErrorPage />} />
