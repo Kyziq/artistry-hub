@@ -14,13 +14,14 @@ import {
 import { Link, useNavigate } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import { allLists } from '../data/list';
+import logo from '../assets/logo.png';
 
 const SearchAutocomplete = ({ allLists }) => {
   const navigate = useNavigate();
 
   const handleSelectionChange = (id) => {
     if (id) {
-      navigate(`/artistry-hub/art/${id}`);
+      navigate(`/art/${id}`);
     }
   };
   return (
@@ -127,8 +128,8 @@ const NavbarComponent = () => {
   const sortedAllList = allItems.sort((a, b) => a.name.localeCompare(b.name));
   return (
     <Navbar maxWidth={'full'} isBordered shouldHideOnScroll>
-      <Link to="/artistry-hub/" reloadDocument>
-        <Image src="./logo.png" alt="Logo" width={40} height={40} isZoomed />
+      <Link to="/" reloadDocument>
+        <Image src={logo} alt="Logo" width={40} height={40} isZoomed />
       </Link>
       <NavbarContent justify="start">
         <NavbarBrand>
