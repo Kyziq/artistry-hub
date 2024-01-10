@@ -11,18 +11,12 @@ function App() {
   return (
     <div className="flex flex-col justify-start items-start min-h-screen bg-gray-100">
       <Router>
-        {/* Navigation Bar */}
         <Navbar />
 
         {/* Route Definitions */}
         <Routes>
-          {/* Home Page */}
           <Route exact path="/artistry-hub/" element={<Home />} />
-
-          {/* Top Picks Page */}
           <Route exact path="/artistry-hub/top-picks" element={<TopPicks />} />
-
-          {/* Art Description Page */}
           <Route path="/artistry-hub/art/:id" element={<ArtDescription />} />
 
           {/* Fallback Error Page for Unmatched Routes */}

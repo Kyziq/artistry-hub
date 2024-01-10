@@ -26,8 +26,6 @@ import { MdOutlineReport } from 'react-icons/md';
 
 export default function MoreArt() {
   const fixedWidth = '250px';
-  const iconClasses =
-    'text-sm text-default-500 pointer-events-none flex-shrink-0';
   const shareUrl = 'http://github.com';
   const title = 'GitHub';
 
@@ -48,8 +46,7 @@ export default function MoreArt() {
   };
 
   return (
-    <div className="mt-5">
-      <h2 className="text-2xl font-bold">More Arts</h2>
+    <div className="mt-10">
       <div className="flex flex-wrap justify-start items-center gap-4 mt-4">
         {Object.values(allLists).map((categoryList, categoryIndex) => (
           <div key={categoryIndex} className="flex gap-4 flex-wrap">
@@ -58,7 +55,6 @@ export default function MoreArt() {
                 key={index}
                 shadow="sm"
                 isPressable
-                onPress={() => console.log('item pressed')}
                 className="relative overflow-hidden inline-block group transition-opacity duration-300 hover:opacity-90"
                 style={{
                   margin: '0 0 1.5em',
@@ -66,6 +62,7 @@ export default function MoreArt() {
                   height: '100%',
                 }}
               >
+                {/* Card Header */}
                 <CardHeader className="absolute z-10 top-1 flex-col !items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex justify-between items-center w-full">
                     <span className="text-sm font-medium text-white">
@@ -87,6 +84,7 @@ export default function MoreArt() {
                     </Button>
                   </div>
                 </CardHeader>
+                {/* Image Component */}
                 <Image
                   removeWrapper
                   shadow="sm"
@@ -95,12 +93,14 @@ export default function MoreArt() {
                   className="object-cover -z-1 w-full h-full"
                   src={item.img}
                 />
+
+                {/* Card Footer */}
                 <CardFooter className="justify-between before:bg-white/10  overflow-hidden py-1 absolute before:rounded-sm rounded-small bottom-1 w-[calc(100%_-_5px)] shadow-small ml-1 z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <div className="flex gap-4 items-center">
                     <Dropdown backdrop="blur">
                       <DropdownTrigger>
                         <Button size="sm" className="p-1">
-                          <MdIosShare className={`${iconClasses} text-sm`} />
+                          <MdIosShare className="text-sm text-default-500 pointer-events-none flex-shrink-0" />
                         </Button>
                       </DropdownTrigger>
                       <DropdownMenu variant="faded" aria-label="Static Actions">
@@ -163,7 +163,7 @@ export default function MoreArt() {
                     <Dropdown>
                       <DropdownTrigger>
                         <Button size="sm" className="p-1">
-                          <TbDots className={`${iconClasses} text-sm`} />
+                          <TbDots className="text-default-500 pointer-events-none flex-shrink-0" />
                         </Button>
                       </DropdownTrigger>
                       <DropdownMenu
@@ -172,12 +172,15 @@ export default function MoreArt() {
                       >
                         <DropdownItem
                           onClick={() => handleDownload(item.img, item.name)}
-                          startContent={<GoDownload className={iconClasses} />}
+                          startContent={
+                            <GoDownload className="text-default-500 pointer-events-none flex-shrink-0" />
+                          }
                         >
-                          Download image
+                          Download
                         </DropdownItem>
                         <DropdownItem
                           key="logout"
+                          className="text-danger"
                           color="danger"
                           startContent={<MdOutlineReport />}
                         >
