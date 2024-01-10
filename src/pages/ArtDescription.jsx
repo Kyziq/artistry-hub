@@ -41,13 +41,23 @@ const ArtDescription = () => {
 
           {/* Card Body */}
           <CardBody className="space-y-4">
-            <div className="text-md text-gray-700">{artItem.description}</div>
-            <ArtDetail label="Year" detail={artItem.date} />
-            <ArtDetail label="Style" detail={artItem.style} />
-            <ArtDetail label="Dimensions" detail={artItem.dimensions} />
+            <div className="text-gray-700">{artItem.description}</div>
+
+            <div>
+              <span className="font-semibold">Year: </span>
+              {artItem.date}
+            </div>
+            <div>
+              <span className="font-semibold">Style: </span>
+              {artItem.style}
+            </div>
+            <div>
+              <span className="font-semibold">Dimensions: </span>
+              {artItem.dimensions}
+            </div>
 
             {/* Location Detail */}
-            <div className="text-sm text-gray-600">
+            <div>
               <span className="font-semibold">Location: </span>
               {artItem.location}
               {flagSrc && (
@@ -80,12 +90,5 @@ const getFlagSrc = (countryCode) => {
     ? `http://purecatamphetamine.github.io/country-flag-icons/3x2/${countryCode}.svg`
     : '';
 };
-
-const ArtDetail = ({ label, detail }) => (
-  <div>
-    <span className="font-semibold">{label}: </span>
-    {detail}
-  </div>
-);
 
 export default ArtDescription;
