@@ -11,73 +11,86 @@ import {
   Autocomplete,
   AutocompleteItem,
 } from '@nextui-org/react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import { allLists } from '../data/list';
 
-const SearchAutocomplete = ({ allLists }) => (
-  <Autocomplete
-    defaultItems={allLists}
-    aria-label="Search for Artworks"
-    classNames={{
-      base: 'max-w-lg',
-      listboxWrapper: 'max-h-[320px]',
-      selectorButton: 'text-default-500',
-    }}
-    inputProps={{
-      classNames: {
-        input: 'ml-1',
-        inputWrapper: 'h-[48px]',
-      },
-    }}
-    listboxProps={{
-      hideSelectedIcon: true,
-      itemClasses: {
-        base: [
-          'rounded-medium',
-          'text-default-500',
-          'transition-opacity',
-          'data-[hover=true]:text-foreground',
-          'dark:data-[hover=true]:bg-default-50',
-          'data-[pressed=true]:opacity-70',
-          'data-[hover=true]:bg-default-200',
-          'data-[selectable=true]:focus:bg-default-100',
-          'data-[focus-visible=true]:ring-default-500',
-        ],
-      },
-    }}
-    placeholder="Search"
-    popoverProps={{
-      offset: 10,
-      classNames: {
-        base: 'rounded-large',
-        content: 'p-1 border-small border-default-100 bg-background',
-      },
-    }}
-    startContent={<FaSearch size={18} />}
-    radius="full"
-    variant="bordered"
-  >
-    {(item) => (
-      <AutocompleteItem key={item.id} textValue={item.name}>
-        <div className="flex justify-between items-center">
-          <div className="flex gap-2 items-center">
-            <Avatar
-              alt={item.name}
-              className="flex-shrink-0"
-              size="sm"
-              src={item.img}
-            />
-            <div className="flex flex-col">
-              <span className="text-small">{item.name}</span>
-              <span className="text-tiny text-default-400">{item.artist}</span>
+const SearchAutocomplete = ({ allLists }) => {
+  const navigate = useNavigate();
+
+  const handleSelectionChange = (id) => {
+    if (id) {
+      navigate(`/artistry-hub/art/${id}`);
+    }
+  };
+  return (
+    <Autocomplete
+      defaultItems={allLists}
+      aria-label="Search for Artworks"
+      classNames={{
+        base: 'max-w-lg',
+        listboxWrapper: 'max-h-[320px]',
+        selectorButton: 'text-default-500',
+      }}
+      inputProps={{
+        classNames: {
+          input: 'ml-1',
+          inputWrapper: 'h-[48px]',
+        },
+      }}
+      listboxProps={{
+        hideSelectedIcon: true,
+        itemClasses: {
+          base: [
+            'rounded-medium',
+            'text-default-500',
+            'transition-opacity',
+            'data-[hover=true]:text-foreground',
+            'dark:data-[hover=true]:bg-default-50',
+            'data-[pressed=true]:opacity-70',
+            'data-[hover=true]:bg-default-200',
+            'data-[selectable=true]:focus:bg-default-100',
+            'data-[focus-visible=true]:ring-default-500',
+          ],
+        },
+      }}
+      placeholder="Search"
+      popoverProps={{
+        offset: 10,
+        classNames: {
+          base: 'rounded-large',
+          content: 'p-1 border-small border-default-100 bg-background',
+        },
+      }}
+      startContent={<FaSearch size={18} />}
+      radius="full"
+      variant="bordered"
+      onSelectionChange={(key) => handleSelectionChange(key)}
+      itemToString={(item) => item?.name}
+    >
+      {(item) => (
+        <AutocompleteItem key={item.id} textValue={item.name}>
+          <div className="flex justify-between items-center">
+            <div className="flex gap-2 items-center">
+              <Avatar
+                alt={item.name}
+                className="flex-shrink-0"
+                size="sm"
+                src={item.img}
+              />
+              <div className="flex flex-col">
+                <span className="text-small">{item.name}</span>
+                <span className="text-tiny text-default-400">
+                  {item.artist}
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-      </AutocompleteItem>
-    )}
-  </Autocomplete>
-);
+        </AutocompleteItem>
+      )}
+    </Autocomplete>
+  );
+};
 
 const UserProfileDropdown = () => (
   <Dropdown placement="bottom-end">
