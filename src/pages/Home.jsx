@@ -11,7 +11,7 @@ const Home = () => {
           ArtistryHub.
         </header>
         <Link
-          to="/artistry-hub/top-picks"
+          to="/top-picks"
           className="flex items-center text-sm sm:text-lg font-medium text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out"
         >
           Explore Featured Artworks{' '}

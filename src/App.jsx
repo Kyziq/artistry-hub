@@ -1,27 +1,29 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-import Home from './pages/Home';
-import TopPicks from './pages/TopPicks';
-import ArtDescription from './pages/ArtDescription';
-import ErrorPage from './pages/Error';
+// Lazy loading of route components
+const Home = lazy(() => import('./pages/Home'));
+const TopPicks = lazy(() => import('./pages/TopPicks'));
+const ArtDescription = lazy(() => import('./pages/ArtDescription'));
+const ErrorPage = lazy(() => import('./pages/Error'));
 
 function App() {
   return (
     <div className="flex flex-col justify-start items-start min-h-screen bg-gray-100">
-      <Router>
+      <Router basename="/artistry-hub/">
         <Navbar />
 
-        {/* Route Definitions */}
-        <Routes>
-          <Route exact path="/artistry-hub/" element={<Home />} />
-          <Route exact path="/artistry-hub/top-picks" element={<TopPicks />} />
-          <Route path="/artistry-hub/art/:id" element={<ArtDescription />} />
-
-          {/* Fallback Error Page for Unmatched Routes */}
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
+        {/* Suspense fallback during lazy loading */}
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/top-picks" element={<TopPicks />} />
+            <Route path="/art/:id" element={<ArtDescription />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+        </Suspense>
       </Router>
 
       {/* Footer */}
@@ -29,4 +31,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
