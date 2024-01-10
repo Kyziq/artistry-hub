@@ -14,6 +14,7 @@ export const artists = {
     birthYear: 1632,
     deathYear: 1675,
     nationality: 'Dutch',
+    countryCode: 'NL', // Netherlands
     notableWorks: [
       'Girl with a Pearl Earring',
       'The Milkmaid',
@@ -28,6 +29,7 @@ export const artists = {
     birthYear: 1985,
     deathYear: null,
     nationality: 'Malaysian',
+    countryCode: 'MY', // Malaysia
     notableWorks: ['Garden of Joy', 'Gadis Picnic'],
     imageUrl: MiriamOmar,
   },
@@ -38,6 +40,7 @@ export const artists = {
     birthYear: 1727,
     deathYear: 1788,
     nationality: 'English',
+    countryCode: 'GB', // United Kingdom (Great Britain)
     notableWorks: ['The Blue Boy', 'Mr and Mrs Andrews'],
     imageUrl: ThomasGainsborough,
   },
@@ -48,6 +51,7 @@ export const artists = {
     birthYear: 1862,
     deathYear: 1918,
     nationality: 'Austrian',
+    countryCode: 'AT', // Austria
     notableWorks: [
       'The Kiss',
       'Lady With A Fan',
@@ -62,6 +66,7 @@ export const artists = {
     birthYear: 1882,
     deathYear: 1967,
     nationality: 'American',
+    countryCode: 'US', // United States
     notableWorks: ['Nighthawks', 'Automat', 'Morning Sun'],
     imageUrl: EdwardHopper,
   },
@@ -72,6 +77,7 @@ export const artists = {
     birthYear: 1390,
     deathYear: 1441,
     nationality: 'Flemish',
+    countryCode: 'BE', // Belgium (Flanders is a region in Belgium)
     notableWorks: ['The Arnolfini Portrait', 'The Ghent Altarpiece'],
     imageUrl: JanVanEyck,
   },
@@ -82,6 +88,7 @@ export const artists = {
     birthYear: 1774,
     deathYear: 1840,
     nationality: 'German',
+    countryCode: 'DE', // Germany
     notableWorks: [
       'Wanderer Above the Sea of Fog',
       'The Abbey in the Oakwood',
