@@ -19,7 +19,7 @@ const ArtDescription = () => {
   //   }
 
   return (
-    <div className="flex flex-col md:flex-row p-4 gap-4">
+    <div className="flex flex-col md:flex-row p-4 gap-6">
       <div className="flex-1">
         <Image
           src={artItem.img}
@@ -27,20 +27,37 @@ const ArtDescription = () => {
           objectFit="cover"
           width="100%"
           height="100%"
+          className="shadow-lg rounded-lg"
         />
       </div>
       <div className="flex-1">
-        <Card>
-          <CardHeader>
-            <h2 className="text-2xl font-bold">{artItem.name}</h2>
-            <p className="text-lg"> by {artItem.artist}</p>
+        <Card className="shadow-xl rounded-lg">
+          <CardHeader className="mb-1">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-800">
+                {artItem.name}
+              </h2>
+              <p className="text-sm text-gray-600 mt-1">by {artItem.artist}</p>
+            </div>
           </CardHeader>
-          <CardBody>
-            <p className="text-md">{artItem.description}</p>
-            <p className="text-md">Year: {artItem.date}</p>
-            <p className="text-md">Style: {artItem.style}</p>
-            <p className="text-md">Dimensions: {artItem.dimensions}</p>
-            <p className="text-md">Location: {artItem.location}</p>
+          <CardBody className="space-y-4">
+            <div className="text-md text-gray-700">{artItem.description}</div>
+            <div className="text-sm text-gray-600 space-y-2">
+              <div>
+                <span className="font-semibold">Year:</span> {artItem.date}
+              </div>
+              <div>
+                <span className="font-semibold">Style:</span> {artItem.style}
+              </div>
+              <div>
+                <span className="font-semibold">Dimensions:</span>{' '}
+                {artItem.dimensions}
+              </div>
+              <div>
+                <span className="font-semibold">Location:</span>{' '}
+                {artItem.location}
+              </div>
+            </div>
           </CardBody>
         </Card>
       </div>
