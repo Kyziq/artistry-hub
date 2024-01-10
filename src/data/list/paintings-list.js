@@ -1,5 +1,4 @@
 import Meules from '../../assets/images/paintings/ClaudeMonet/Meules.jpg';
-import LesDemoisellesdAvignon from '../../assets/images/paintings/PabloPicasso/LesDemoisellesdAvignon.jpg';
 import GadisPicnic from '../../assets/images/paintings/MiriamOmar/GadisPicnic.png';
 import GardenOfJoy from '../../assets/images/paintings/MiriamOmar/GardenOfJoy.png';
 import LadyWithAFan from '../../assets/images/paintings/GustavKlimt/LadyWithAFan.jpg';
@@ -27,21 +26,6 @@ export const paintingsList = [
   },
   {
     id: 3002,
-    name: "Les Demoiselles d'Avignon",
-    img: LesDemoisellesdAvignon,
-    artist: 'Pablo Picasso',
-    date: '1907',
-    description:
-      "Les Demoiselles d'Avignon is a groundbreaking work by Pablo Picasso that marks a radical break from traditional composition and perspective. This painting is seen as a precursor to Cubism and a pivotal work in the development of modern art.",
-    location: 'Museum of Modern Art, New York City, USA',
-    countryCode: 'US',
-    dimensions: '243.9 cm x 233.7 cm',
-    style: 'Cubism',
-    artistInfo: artists['Pablo Picasso'] || {},
-    likes: 19,
-  },
-  {
-    id: 3003,
     name: 'Garden Of Joy',
     img: GardenOfJoy,
     artist: 'Mariam Omar',
@@ -56,7 +40,7 @@ export const paintingsList = [
     likes: 8,
   },
   {
-    id: 3004,
+    id: 3003,
     name: 'Gadis Picnic',
     img: GadisPicnic,
     artist: 'Mariam Omar',
@@ -71,7 +55,7 @@ export const paintingsList = [
     likes: 11,
   },
   {
-    id: 3005,
+    id: 3004,
     name: 'Lady with A Fan',
     img: LadyWithAFan,
     artist: 'Gustav Klimt',
@@ -86,7 +70,7 @@ export const paintingsList = [
     likes: 18,
   },
   {
-    id: 3006,
+    id: 3005,
     name: 'Nighthawks',
     img: Nighthawks,
     artist: 'Edward Hopper',
@@ -101,7 +85,7 @@ export const paintingsList = [
     likes: 6,
   },
   {
-    id: 3007,
+    id: 3006,
     name: 'Automat',
     img: Automat,
     artist: 'Edward Hopper',
@@ -116,7 +100,7 @@ export const paintingsList = [
     likes: 2,
   },
   {
-    id: 3008,
+    id: 3007,
     name: 'Morning Sun',
     img: MorningSun,
     artist: 'Edward Hopper',
@@ -131,7 +115,7 @@ export const paintingsList = [
     likes: 1,
   },
   {
-    id: 3009,
+    id: 3008,
     name: 'The Ghent Altarpiece',
     img: TheGhentAltarpiece,
     artist: 'Jan Van Eyck',
