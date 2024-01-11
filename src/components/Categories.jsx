@@ -15,9 +15,9 @@ const CategoryItem = ({ category }) => (
 
 const Categories = () => {
   return (
-    <div className="mt-5">
+    <div className="mt-5 text-center md:text-left">
       <h2 className="text-xl font-semibold">Categories</h2>
-      <div className="flex flex-wrap justify-start items-center gap-4 mt-4">
+      <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 mt-4">
         {categories.map((category) => (
           <CategoryItem key={category.name} category={category} />
         ))}
