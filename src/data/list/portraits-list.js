@@ -14,7 +14,7 @@ export const portraitsList = [
     img: MonaLisa,
     date: '1503 - 1506',
     description:
-      "The Mona Lisa is a half-length portrait painting by the Italian Renaissance artist Leonardo da Vinci that has been described as 'the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world'.",
+      "The Mona Lisa, an iconic masterpiece by the Italian Renaissance genius Leonardo da Vinci, stands as a testament to the heights of artistic achievement. This half-length portrait is widely recognized as 'the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world.' Leonardo's meticulous rendering of Lisa Gherardini's enigmatic smile and the captivating use of sfumato technique have made 'Mona Lisa' an enduring symbol of artistic brilliance. Housed in the Louvre Museum in Paris, France, it remains a must-see masterpiece of the Renaissance era, enchanting visitors with its timeless charm and intrigue.",
     location: 'Louvre Museum, Paris, France',
     countryCode: 'FR',
     dimensions: '77 cm x 53 cm',
@@ -28,7 +28,7 @@ export const portraitsList = [
     img: WhistlersMother,
     date: '1871',
     description:
-      "Arrangement in Grey and Black No.1, best known under its colloquial name Whistler's Mother, is a painting in oils on canvas created by the American-born painter James McNeill Whistler in 1871.",
+      "Arrangement in Grey and Black No.1, affectionately known as Whistler's Mother, is a masterpiece in oils on canvas created by the American-born painter James McNeill Whistler in 1871. This enduring work of Realism is a heartfelt portrayal of the artist's mother, capturing a profound sense of reverence and quiet dignity. The balanced composition, restrained color palette, and meticulous attention to detail exemplify Whistler's commitment to the principles of Realism. Displayed in the esteemed Musée d'Orsay in Paris, France, this painting continues to resonate with art enthusiasts worldwide, offering a timeless glimpse into the depths of maternal affection and artistic skill.",
     location: "Musée d'Orsay, Paris, France",
     countryCode: 'FR',
     dimensions: '144.3 cm x 162.5 cm',

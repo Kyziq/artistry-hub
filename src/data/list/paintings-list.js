@@ -15,7 +15,7 @@ export const paintingsList = [
     img: Meules,
     date: '1890',
     description:
-      'Meules is part of a series of paintings by Claude Monet that depict haystacks in the fields near his home in Giverny, France. The series is known for its thematic use of light and the changing seasons.',
+      'Meules is a magnificent painting by Claude Monet, part of his iconic series depicting haystacks in the picturesque fields near his home in Giverny, France. In this series, Monet masterfully captures the interplay of light and the ever-changing seasons, using his distinctive Impressionist style to evoke the beauty and transience of the natural world. With its play of colors and textures, "Meules" stands as a timeless testament to Monet\'s ability to translate the fleeting moments of nature onto canvas, making it a cherished gem in the world of Impressionism.',
     location: 'Private Collection',
     countryCode: '',
     dimensions: '73 cm x 92.5cm',
@@ -29,7 +29,7 @@ export const paintingsList = [
     img: GardenOfJoy,
     date: '2022',
     description:
-      "Garden of Joy is part of a series of paintings by Miriam Omar that explore a flora theme, showcasing the beauty and diversity of botanical elements. The artwork captures the essence of nature through Miriam Omar's unique artistic perspective.",
+      "'Garden of Joy' is a masterpiece that breathes life into the canvas. With a palette of vibrant colors and intricate brushwork, it creates a mesmerizing floral tapestry that exudes happiness and serenity. The artist's skillful craftsmanship brings forth the beauty of a blossoming garden, inviting viewers to immerse themselves in its enchanting charm. This artwork is a celebration of nature's splendor, capturing the essence of joy through its vivid depiction of flowers and foliage.",
     location: 'Zhan Art Space',
     countryCode: 'MY', // Zhan Art Space is in Malaysia
     dimensions: '20.1 cm x 20.1cm',
@@ -43,7 +43,7 @@ export const paintingsList = [
     img: GadisPicnic,
     date: '2022',
     description:
-      'Gadis Picnic is part of a series of paintings by Miriam Omar that explore a flora theme, showcasing two Malaysian girls dressed in baju kurung as they enjoy a picnic under a tree. The artwork beautifully captures the cultural and natural elements, creating a serene and picturesque scene.',
+      'Gadis Picnic, an exquisite piece by Miriam Omar, is part of her evocative series celebrating the flora theme. This painting portrays two Malaysian girls dressed in traditional baju kurung as they enjoy a serene picnic beneath the shade of a tree. With remarkable skill, Miriam Omar combines cultural and natural elements, creating a picturesque and harmonious scene that beautifully captures the essence of Malaysian culture and nature. "Gadis Picnic" is a testament to the artist\'s ability to merge artistry and cultural appreciation.',
     location: 'Zhan Art Space',
     countryCode: 'MY', // Zhan Art Space is in Malaysia
     dimensions: '15.1 cm x 20.1cm',
