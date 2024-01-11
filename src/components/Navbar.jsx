@@ -12,7 +12,15 @@ import {
   AutocompleteItem,
 } from '@nextui-org/react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaSearch } from 'react-icons/fa';
+import {
+  FaSearch,
+  FaCog,
+  FaHeart,
+  FaBell,
+  FaQuestionCircle,
+  FaCommentDots,
+  FaSignOutAlt,
+} from 'react-icons/fa';
 import { allLists } from '../data/list';
 import logo from '../assets/logo.png';
 
@@ -104,35 +112,71 @@ const SearchAutocomplete = ({ allLists }) => {
   );
 };
 
-const UserProfileDropdown = () => (
-  <Dropdown placement="bottom-end">
-    <DropdownTrigger>
-      <Avatar
-        isBordered
-        as="button"
-        className="transition-transform"
-        color="primary"
-        name="Hafiz Suip"
-        size="sm"
-        src="https://clipart-library.com/new_gallery/241-2415819_pikachu-in-ash-ash-ketchum-hat-pikachu.png"
-      />
-    </DropdownTrigger>
-    <DropdownMenu aria-label="Profile Actions" variant="flat">
-      <DropdownItem key="profile" className="h-14 gap-2">
-        <p className="font-semibold">Signed in as</p>
-        <p className="font-semibold">hafizsuip@gmail.com</p>
-      </DropdownItem>
-      <DropdownItem key="settings">Settings</DropdownItem>
-      <DropdownItem key="favourites">Favourites</DropdownItem>
-      <DropdownItem key="notificaitons">Notifications</DropdownItem>
-      <DropdownItem key="help_and_support">Help & Support</DropdownItem>
-      <DropdownItem key="feedback">Feedback</DropdownItem>
-      <DropdownItem key="logout" color="danger" className="text-danger">
-        Log Out
-      </DropdownItem>
-    </DropdownMenu>
-  </Dropdown>
-);
+const UserProfileDropdown = () => {
+  const iconClasses = 'text-sm';
+
+  return (
+    <Dropdown placement="bottom-end">
+      <DropdownTrigger>
+        <Avatar
+          isBordered
+          as="button"
+          className="transition-transform"
+          color="primary"
+          name="Hafiz Suip"
+          size="sm"
+          src="https://clipart-library.com/new_gallery/241-2415819_pikachu-in-ash-ash-ketchum-hat-pikachu.png"
+        />
+      </DropdownTrigger>
+      <DropdownMenu aria-label="Profile Actions" variant="flat">
+        <DropdownItem key="profile">
+          <div>
+            <p className="font-semibold">Signed in as</p>
+            <p className="font-semibold">hafizsuip@gmail.com</p>
+          </div>
+        </DropdownItem>
+        <DropdownItem
+          key="settings"
+          startContent={<FaCog className={iconClasses} />}
+        >
+          Settings
+        </DropdownItem>
+        <DropdownItem
+          key="favourites"
+          startContent={<FaHeart className={iconClasses} />}
+        >
+          Favourites
+        </DropdownItem>
+        <DropdownItem
+          key="notifications"
+          startContent={<FaBell className={iconClasses} />}
+        >
+          Notifications
+        </DropdownItem>
+        <DropdownItem
+          key="help_and_support"
+          startContent={<FaQuestionCircle className={iconClasses} />}
+        >
+          Help & Support
+        </DropdownItem>
+        <DropdownItem
+          key="feedback"
+          startContent={<FaCommentDots className={iconClasses} />}
+        >
+          Feedback
+        </DropdownItem>
+        <DropdownItem
+          key="logout"
+          color="danger"
+          className="text-danger"
+          startContent={<FaSignOutAlt className={iconClasses} />}
+        >
+          Log Out
+        </DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
+  );
+};
 
 const NavbarComponent = () => {
   const allItems = Object.values(allLists).flat();
