@@ -17,7 +17,7 @@ export const artists = {
   'Johannes Vermeer': {
     id: 1,
     name: 'Johannes Vermeer',
-    bio: 'Johannes Vermeer was a Dutch Baroque Period painter known for his masterly treatment and use of light in his work.',
+    bio: "Johannes Vermeer, born in 1632 in Delft, Netherlands, was a Dutch Baroque painter who specialized in domestic interior scenes of middle-class life. Vermeer's works are renowned for their brilliant use of light and shadow, as well as their meticulous detail. He was a moderately successful provincial genre painter in his lifetime, but his fame grew posthumously, particularly in the 19th century. Today, he is recognized as one of the greatest painters of the Dutch Golden Age. His most famous works include 'Girl with a Pearl Earring' and 'The Milkmaid,' which exemplify his skill at rendering effects of light and color.",
     birthYear: 1632,
     deathYear: 1675,
     nationality: 'Dutch',
@@ -32,7 +32,7 @@ export const artists = {
   'Miriam Omar': {
     id: 2,
     name: 'Miriam Omar',
-    bio: 'Miriam Omar is a contemporary Malaysian artist known for her unique and expressive style.',
+    bio: "Miriam Omar, born in 1985 in Malaysia, is a contemporary Malaysian artist celebrated for her vibrant and expressive paintings. Omar's art is deeply influenced by her cultural heritage, blending traditional Malaysian motifs with modern artistic styles. Her work often features bright, bold colors and a playful yet thoughtful exploration of themes such as identity, nature, and femininity. Key works like 'Garden of Joy' and 'Gadis Picnic' showcase her unique ability to bring together elements of Malaysian folklore with contemporary art trends.",
     birthYear: 1985,
     deathYear: null,
     nationality: 'Malaysian',
@@ -43,7 +43,7 @@ export const artists = {
   'Thomas Gainsborough': {
     id: 3,
     name: 'Thomas Gainsborough',
-    bio: 'Thomas Gainsborough was an English portrait and landscape painter during the Rococo and early Romantic periods. He is known for his skillful use of color and innovative approach to portraiture.',
+    bio: "Thomas Gainsborough, born in 1727 in Sudbury, Suffolk, England, was a prominent English painter known for his portrait and landscape paintings. A founder of the British school of landscape painting, Gainsborough's style evokes a sense of romanticism and impressionism. His portraits are particularly celebrated for their elegance and grace. Notable works include 'The Blue Boy' and 'Mr and Mrs Andrews,' which combine his expertise in landscapes with portraiture, creating beautifully balanced compositions.",
     birthYear: 1727,
     deathYear: 1788,
     nationality: 'English',
@@ -54,7 +54,7 @@ export const artists = {
   'Gustav Klimt': {
     id: 4,
     name: 'Gustav Klimt',
-    bio: "Gustav Klimt was an Austrian Symbolist painter and one of the most prominent members of the Vienna Secession movement. Klimt is noted for his paintings, murals, sketches, and other objets d'art.",
+    bio: "Gustav Klimt, born in 1862 in Baumgarten, near Vienna, was an Austrian Symbolist painter and a key figure of the Vienna Secession movement. His work is marked by a sensual and decorative style, often exploring themes of love, sexuality, and death. Klimt's paintings, murals, and sketches are distinguished by their use of gold leaf and elegant, ornate patterns. 'The Kiss,' 'Lady With A Fan,' and 'Portrait of Adele Bloch-Bauer I' are among his most famous works, showcasing his unique approach to form and composition.",
     birthYear: 1862,
     deathYear: 1918,
     nationality: 'Austrian',
@@ -69,7 +69,7 @@ export const artists = {
   'Edward Hopper': {
     id: 5,
     name: 'Edward Hopper',
-    bio: 'Edward Hopper was an American realist painter and printmaker known for his melancholy depictions of American modern life. His work is widely known and recognizable for its cinematic quality and isolated scenes.',
+    bio: "Edward Hopper, born in 1882 in Nyack, New York, was an American realist painter and printmaker. Known for his depictions of solitude in contemporary American life, his art often captures the isolation of urban and rural scenes. Hopper's use of light is particularly notable, creating a cinematic quality in paintings like 'Nighthawks,' 'Automat,' and 'Morning Sun.' His work has become an iconic representation of mid-20th-century Americana.",
     birthYear: 1882,
     deathYear: 1967,
     nationality: 'American',
@@ -80,7 +80,7 @@ export const artists = {
   'Jan Van Eyck': {
     id: 6,
     name: 'Jan Van Eyck',
-    bio: 'Jan Van Eyck was a Flemish painter active during the Northern Renaissance. He was one of the most significant and influential artists of the 15th century, known for his mastery of oil painting and meticulous attention to detail.',
+    bio: "Jan Van Eyck, born around 1390 in Maaseik, present-day Belgium, was a Flemish painter active during the Northern Renaissance. He is one of the early innovators of what became known as Early Netherlandish painting and one of the most significant representatives of Early Northern Renaissance art. Van Eyck's works are known for their intricate detail and masterful use of oil paint. His most famous works include 'The Arnolfini Portrait' and 'The Ghent Altarpiece,' which are revered for their remarkable detail and realism.",
     birthYear: 1390,
     deathYear: 1441,
     nationality: 'Flemish',
@@ -91,7 +91,7 @@ export const artists = {
   'Caspar David Friedrich': {
     id: 7,
     name: 'Caspar David Friedrich',
-    bio: 'Caspar David Friedrich was a German Romantic landscape painter, considered one of the most important figures in the movement. His works often feature contemplative and allegorical scenes, emphasizing the beauty and grandeur of nature.',
+    bio: "Born in 1774 in Greifswald, Germany, Caspar David Friedrich was a 19th-century German Romantic landscape painter, generally considered the most important German artist of his generation. His works are characterized by a contemplative portrayal of nature, often tinged with symbolism and melancholy. He is best known for paintings such as 'Wanderer Above the Sea of Fog' and 'The Abbey in the Oakwood,' which reflect his interest in the sublime and the spiritual quality of nature.",
     birthYear: 1774,
     deathYear: 1840,
     nationality: 'German',
@@ -106,7 +106,7 @@ export const artists = {
   'Jasper Johns': {
     id: 8,
     name: 'Jasper Johns',
-    bio: 'Jasper Johns is an American painter, sculptor, and printmaker whose work is associated with abstract expressionism, Neo-Dada, and pop art. He is known for his depictions of the American flag and other familiar objects.',
+    bio: "Jasper Johns, born in 1930 in Augusta, Georgia, is an American painter, sculptor, and printmaker associated with abstract expressionism, Neo-Dada, and Pop art. Johns' work is known for its depiction of familiar icons, such as flags, maps, and targets, and his innovative use of materials. His works like 'Flag' and 'Three Flags' play with themes of perception and the fluid nature of identity. Johns is a pivotal figure in contemporary art, bridging the gap between abstract expressionism and the various art movements that followed.",
     birthYear: 1930,
     deathYear: null,
     nationality: 'American',
@@ -117,7 +117,7 @@ export const artists = {
   'Willem de Kooning': {
     id: 9,
     name: 'Willem de Kooning',
-    bio: "Willem de Kooning was a Dutch-American abstract expressionist artist known for his unique style that blended figuration with abstraction. De Kooning's paintings are characterized by their aggressive brushstrokes and vibrant color palette.",
+    bio: "Willem de Kooning was a Dutch-American artist, a central figure in the Abstract Expressionist movement. Migrating to the U.S. in 1926, he developed a unique style blending figuration and abstraction, evident in his provocative 'Women' series and celebrated works like 'Woman I'. His dynamic brushstrokes and bold colors distinguished his work in 'Excavation' and 'Interchange', contributing significantly to the narrative of modern art. De Kooning's influence is seen in his exploration of form and the human figure, marking a defining moment in the transition to contemporary abstract painting.",
     birthYear: 1904,
     deathYear: 1997,
     nationality: 'Dutch-American',
@@ -128,7 +128,7 @@ export const artists = {
   'Vincent Van Gogh': {
     id: 10,
     name: 'Vincent Van Gogh',
-    bio: 'Vincent Van Gogh was a Dutch post-impressionist painter whose work had a far-reaching influence on 20th-century art. His oeuvre includes portraits, self-portraits, landscapes, and still lifes characterized by bold colors and dramatic, impulsive brushwork.',
+    bio: "Vincent Van Gogh, a Dutch post-impressionist painter, is famed for his profound influence on 20th-century art. His art, characterized by its vibrant color and emotional intensity, includes iconic pieces such as 'Starry Night', 'Sunflowers', and 'Café Terrace at Night'. His turbulent life, marked by mental illness and poverty, fueled his creative output of around 860 oil paintings, which posthumously earned him worldwide acclaim. Van Gogh's legacy lies in his pioneering approach to color and brushwork, which continues to inspire artists and art enthusiasts alike.",
     birthYear: 1853,
     deathYear: 1890,
     nationality: 'Dutch',

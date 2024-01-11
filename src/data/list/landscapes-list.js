@@ -22,7 +22,7 @@ export const landscapesList = [
     id: 2002,
     name: 'Mr and Mrs Andrews',
     img: MrAndMrsAndrews,
-    date: 'c. 1750',
+    date: '1750',
     description:
       'Mr and Mrs Andrews is a captivating landscape painting by Thomas Gainsborough, created around 1750. The artwork features a portrait of a newlywed couple, Mr. Robert Andrews and his wife Frances, set against the backdrop of the English countryside. Gainsborough skillfully combines portraiture with landscape elements, showcasing his talent in capturing both the human subject and the beauty of the natural environment. The painting is celebrated for its romantic and idyllic portrayal of the English rural landscape during the Rococo period.',
     location: 'Private Collection',
@@ -36,7 +36,7 @@ export const landscapesList = [
     id: 2003,
     name: 'The Blue Boy',
     img: TheBlueBoy,
-    date: 'c. 1770',
+    date: '1770',
     description:
       "The Blue Boy is a renowned portrait painting by Thomas Gainsborough, created around 1770. The artwork features a young boy dressed in a striking blue satin costume, standing against a lush, green landscape. The painting is celebrated for its vibrant use of color, particularly the intense blue of the boy's attire, and Gainsborough's masterful portrayal of texture and light. The Blue Boy is considered an iconic example of Rococo portraiture during the 18th century.",
     location:
