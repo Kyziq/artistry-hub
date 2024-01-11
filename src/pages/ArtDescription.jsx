@@ -1,6 +1,13 @@
 import { useParams } from 'react-router-dom';
 import { allLists } from '../data/list';
-import { Card, CardHeader, CardBody, Image } from '@nextui-org/react';
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  Image,
+  Tabs,
+  Tab,
+} from '@nextui-org/react';
 
 const ArtDescription = () => {
   const { id } = useParams();
@@ -28,50 +35,83 @@ const ArtDescription = () => {
 
       {/* Info Section */}
       <div className="flex-1">
-        <Card className="shadow-xl rounded-lg">
-          {/* Card Header */}
-          <CardHeader className="mb-1">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-800">
-                {artItem.name}
-              </h2>
-              <p className="text-sm text-gray-600 mt-1">
-                by {artItem.artistInfo.name}
-              </p>
-            </div>
-          </CardHeader>
+        <Tabs aria-label="Options">
+          <Tab key="Art" title="Art Info">
+            <Card className="shadow-xl rounded-lg">
+              {/* Card Header */}
+              <CardHeader className="mb-1">
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-800">
+                    {artItem.name}
+                  </h2>
+                  <p className="text-sm text-gray-600 mt-1">
+                    by {artItem.artistInfo.name}
+                  </p>
+                </div>
+              </CardHeader>
 
-          {/* Card Body */}
-          <CardBody className="space-y-4">
-            <div className="text-gray-700">{artItem.description}</div>
+              {/* Card Body */}
+              <CardBody className="space-y-4">
+                <div className="text-gray-700">{artItem.description}</div>
 
-            <div>
-              <span className="font-semibold">Year: </span>
-              {artItem.date}
-            </div>
-            <div>
-              <span className="font-semibold">Style: </span>
-              {artItem.style}
-            </div>
-            <div>
-              <span className="font-semibold">Dimensions: </span>
-              {artItem.dimensions}
-            </div>
+                <div>
+                  <span className="font-semibold">Year: </span>
+                  {artItem.date}
+                </div>
+                <div>
+                  <span className="font-semibold">Style: </span>
+                  {artItem.style}
+                </div>
+                <div>
+                  <span className="font-semibold">Dimensions: </span>
+                  {artItem.dimensions}
+                </div>
 
-            {/* Location Detail */}
-            <div>
-              <span className="font-semibold">Location: </span>
-              {artItem.location}
-              {flagSrc && (
-                <img
-                  alt={artItem.countryCode}
-                  src={flagSrc}
-                  className="inline-block w-6 ml-2"
-                />
-              )}
-            </div>
-          </CardBody>
-        </Card>
+                {/* Location Detail */}
+                <div>
+                  <span className="font-semibold">Location: </span>
+                  {artItem.location}
+                  {flagSrc && (
+                    <img
+                      alt={artItem.countryCode}
+                      src={flagSrc}
+                      className="inline-block w-6 ml-2"
+                    />
+                  )}
+                </div>
+              </CardBody>
+            </Card>
+          </Tab>
+
+          <Tab key="Artist" title="Artist Info">
+            <Card className="shadow-xl rounded-lg">
+              {/* Card Header */}
+              <CardHeader className="mb-1">
+                <h2 className="text-3xl font-bold text-gray-800">
+                  {artItem.artistInfo.name}
+                </h2>
+              </CardHeader>
+
+              {/* Card Body */}
+              <CardBody className="space-y-4">
+                <div className="text-gray-700">{artItem.artistInfo.bio}</div>
+                <div>
+                  <span className="font-semibold">Birth Year: </span>
+                  {artItem.artistInfo.birthYear}
+                </div>
+                <div>
+                  <span className="font-semibold">Death Year: </span>
+                  {artItem.artistInfo.deathYear || 'N/A'}
+                </div>
+                <div>
+                  <span className="font-semibold">Nationality: </span>
+                  {artItem.artistInfo.nationality}
+                </div>
+                {/* Add other artist information fields here */}
+              </CardBody>
+            </Card>
+          </Tab>
+        </Tabs>
       </div>
     </div>
   );
