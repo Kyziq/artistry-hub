@@ -24,6 +24,9 @@ const SearchAutocomplete = ({ allLists }) => {
       navigate(`/art/${id}`);
     }
   };
+
+  const itemToString = (item) => (item ? `${item.name} - ${item.artist}` : '');
+
   return (
     <Autocomplete
       defaultItems={allLists}
@@ -66,11 +69,11 @@ const SearchAutocomplete = ({ allLists }) => {
       startContent={<FaSearch size={18} />}
       radius="full"
       variant="bordered"
-      onSelectionChange={(key) => handleSelectionChange(key)}
-      itemToString={(item) => item?.name}
+      onSelectionChange={handleSelectionChange}
+      itemToString={itemToString}
     >
       {(item) => (
-        <AutocompleteItem key={item.id} textValue={item.name}>
+        <AutocompleteItem key={item.id} textValue={itemToString(item)}>
           <div className="flex justify-between items-center">
             <div className="flex gap-2 items-center">
               <Avatar
