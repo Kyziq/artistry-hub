@@ -55,6 +55,10 @@ const MoreArt = () => {
 
   const handleImageClick = (itemId) => navigate(`/art/${itemId}`);
 
+  const handleDropdownClick = (event) => {
+    event.stopPropagation();
+  };
+
   return (
     <div className="mt-10">
       <div className="flex flex-wrap justify-start items-center gap-4 mt-4">
@@ -80,24 +84,22 @@ const MoreArt = () => {
                     height: '100%',
                   }}
                 >
-                  {/* Card Header */}
                   <CardHeader className="absolute z-10 top-1 right-1 flex justify-end items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <Button
-                      className={`transition duration-300 ease-in-out ${
-                        savedStates[index]
-                          ? 'bg-primary-500 hover:bg-primary-600 text-white border-primary-500'
-                          : 'bg-white hover:bg-gray-100 text-gray-700 border-gray-300'
-                      } font-semibold py-2 px-4 rounded-full shadow-sm`}
                       color={savedStates[index] ? 'primary' : 'default'}
                       radius="full"
                       size="sm"
                       variant="bordered"
                       onPress={() => toggleSaveState(index)}
+                      className={`${
+                        savedStates[index]
+                          ? 'bg-primary-500 hover:bg-primary-600 text-white border-primary-500'
+                          : 'bg-white hover:bg-gray-100 text-gray-700 border-gray-300'
+                      } font-semibold py-2 px-4 rounded-full shadow-sm transition duration-300 ease-in-out`}
                     >
                       {savedStates[index] ? 'Saved' : 'Save'}
                     </Button>
                   </CardHeader>
-                  {/* Image Component */}
                   <Image
                     removeWrapper
                     shadow="sm"
@@ -106,11 +108,9 @@ const MoreArt = () => {
                     className="object-cover -z-1 w-full h-full"
                     src={item.img}
                   />
-
-                  {/* Card Footer */}
-                  <CardFooter className="justify-between before:bg-white/10  overflow-hidden py-1 absolute before:rounded-sm rounded-small bottom-1 w-[calc(100%_-_5px)] shadow-small ml-1 z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <CardFooter className="justify-between before:bg-white/10 overflow-hidden py-1 absolute before:rounded-sm rounded-small bottom-1 w-[calc(100%_-_5px)] shadow-small ml-1 z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <div className="flex gap-4 items-center">
-                      <Dropdown backdrop="blur">
+                      <Dropdown backdrop="blur" onClick={handleDropdownClick}>
                         <DropdownTrigger>
                           <Button
                             size="sm"
@@ -185,7 +185,7 @@ const MoreArt = () => {
                         </DropdownMenu>
                       </Dropdown>
 
-                      <Dropdown>
+                      <Dropdown onClick={handleDropdownClick}>
                         <DropdownTrigger>
                           <Button
                             size="sm"
