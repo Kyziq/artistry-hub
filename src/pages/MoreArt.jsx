@@ -1,35 +1,44 @@
-import React from 'react';
-import { Card, CardHeader, Image, Button, CardFooter } from '@nextui-org/react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
+  Card,
+  CardHeader,
+  Image,
+  Button,
+  CardFooter,
+  Tooltip,
   Dropdown,
   DropdownTrigger,
   DropdownMenu,
   DropdownItem,
 } from '@nextui-org/react';
 import {
-  FacebookIcon,
   FacebookShareButton,
-  XIcon,
-  TwitterShareButton,
   WhatsappShareButton,
-  WhatsappIcon,
+  TwitterShareButton,
   RedditShareButton,
-  RedditIcon,
   EmailShareButton,
+  FacebookIcon,
+  WhatsappIcon,
+  TwitterIcon,
+  RedditIcon,
   EmailIcon,
 } from 'react-share';
 import { allLists } from '../data/list';
-import { MdIosShare } from 'react-icons/md';
-import { TbDots } from 'react-icons/tb';
-import { GoDownload } from 'react-icons/go';
-import { MdOutlineReport } from 'react-icons/md';
+import {
+  FaDownload,
+  FaExclamationTriangle,
+  FaShareAlt,
+  FaEllipsisV,
+} from 'react-icons/fa';
 
-export default function MoreArt() {
+const MoreArt = () => {
+  const navigate = useNavigate();
+  const [savedStates, setSavedStates] = useState({});
+  const shareUrl = 'https://kyziq.github.io/artistry-hub/';
+  const title = 'Artistry-Hub';
   const fixedWidth = '250px';
-  const shareUrl = 'http://github.com';
-  const title = 'GitHub';
 
-  const [savedStates, setSavedStates] = React.useState({});
   const toggleSaveState = (index) => {
     setSavedStates((prevState) => ({
       ...prevState,
@@ -37,13 +46,14 @@ export default function MoreArt() {
     }));
   };
 
-  const handleDownload = (imageUrl, imageName) => {
-    // Create an anchor element
+  const handleDownload = (imageUrl, imageName = 'download') => {
     const anchor = document.createElement('a');
     anchor.href = imageUrl;
-    anchor.download = imageName || 'download';
+    anchor.download = imageName;
     anchor.click();
   };
+
+  const handleImageClick = (itemId) => navigate(`/art/${itemId}`);
 
   return (
     <div className="mt-10">
@@ -51,150 +61,171 @@ export default function MoreArt() {
         {Object.values(allLists).map((categoryList, categoryIndex) => (
           <div key={categoryIndex} className="flex gap-4 flex-wrap">
             {categoryList.map((item, index) => (
-              <Card
-                key={index}
-                shadow="sm"
-                isPressable
-                className="relative overflow-hidden inline-block group transition-opacity duration-300 hover:opacity-90"
-                style={{
-                  margin: '0 0 1.5em',
-                  width: fixedWidth,
-                  height: '100%',
-                }}
+              <Tooltip
+                key={`tooltip-${categoryIndex}-${index}`}
+                content={item.name}
+                placement="top"
+                color="foreground"
+                showArrow
               >
-                {/* Card Header */}
-                <CardHeader className="absolute z-10 top-1 flex-col !items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="flex justify-between items-center w-full">
-                    <span className="text-sm font-medium text-white">
-                      Header Tumblr
-                    </span>
+                <Card
+                  key={`card-${categoryIndex}-${index}`}
+                  shadow="sm"
+                  isPressable
+                  onClick={() => handleImageClick(item.id)}
+                  className="relative overflow-hidden inline-block group transition-opacity duration-300 hover:opacity-90"
+                  style={{
+                    margin: '0 0 1.5em',
+                    width: fixedWidth,
+                    height: '100%',
+                  }}
+                >
+                  {/* Card Header */}
+                  <CardHeader className="absolute z-10 top-1 right-1 flex justify-end items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <Button
-                      className={
+                      className={`transition duration-300 ease-in-out ${
                         savedStates[index]
-                          ? 'bg-black text-white border-default-200'
-                          : ''
-                      }
-                      color="danger"
+                          ? 'bg-primary-500 hover:bg-primary-600 text-white border-primary-500'
+                          : 'bg-white hover:bg-gray-100 text-gray-700 border-gray-300'
+                      } font-semibold py-2 px-4 rounded-full shadow-sm`}
+                      color={savedStates[index] ? 'primary' : 'default'}
                       radius="full"
                       size="sm"
-                      variant={savedStates[index] ? 'bordered' : 'solid'}
+                      variant="bordered"
                       onPress={() => toggleSaveState(index)}
                     >
                       {savedStates[index] ? 'Saved' : 'Save'}
                     </Button>
-                  </div>
-                </CardHeader>
-                {/* Image Component */}
-                <Image
-                  removeWrapper
-                  shadow="sm"
-                  radius="lg"
-                  alt={item.name}
-                  className="object-cover -z-1 w-full h-full"
-                  src={item.img}
-                />
+                  </CardHeader>
+                  {/* Image Component */}
+                  <Image
+                    removeWrapper
+                    shadow="sm"
+                    radius="lg"
+                    alt={item.name}
+                    className="object-cover -z-1 w-full h-full"
+                    src={item.img}
+                  />
 
-                {/* Card Footer */}
-                <CardFooter className="justify-between before:bg-white/10  overflow-hidden py-1 absolute before:rounded-sm rounded-small bottom-1 w-[calc(100%_-_5px)] shadow-small ml-1 z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <div className="flex gap-4 items-center">
-                    <Dropdown backdrop="blur">
-                      <DropdownTrigger>
-                        <Button size="sm" className="p-1">
-                          <MdIosShare className="text-sm text-default-500 pointer-events-none flex-shrink-0" />
-                        </Button>
-                      </DropdownTrigger>
-                      <DropdownMenu variant="faded" aria-label="Static Actions">
-                        <DropdownItem key="facebook" className="cursor-pointer">
-                          <FacebookShareButton
-                            url={shareUrl}
-                            title={title}
-                            className="Demo__some-network__share-button flex items-center"
+                  {/* Card Footer */}
+                  <CardFooter className="justify-between before:bg-white/10  overflow-hidden py-1 absolute before:rounded-sm rounded-small bottom-1 w-[calc(100%_-_5px)] shadow-small ml-1 z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <div className="flex gap-4 items-center">
+                      <Dropdown backdrop="blur">
+                        <DropdownTrigger>
+                          <Button
+                            size="sm"
+                            className="p-1 transition-all duration-300 ease-in-out bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow hover:shadow-lg"
                           >
-                            <FacebookIcon size={32} round />
-                            <span className="ml-2">Facebook</span>
-                          </FacebookShareButton>
-                        </DropdownItem>
-
-                        <DropdownItem key="whatsapp" className="cursor-pointer">
-                          <WhatsappShareButton
-                            url={shareUrl}
-                            title={title}
-                            className="Demo__some-network__share-button flex items-center"
-                          >
-                            <WhatsappIcon size={32} round />
-                            <span className="ml-2">Whatsapp</span>
-                          </WhatsappShareButton>
-                        </DropdownItem>
-
-                        <DropdownItem key="x" className="cursor-pointer">
-                          <TwitterShareButton
-                            url={shareUrl}
-                            title={title}
-                            className="Demo__some-network__share-button flex items-center"
-                          >
-                            <XIcon size={32} round />
-                            <span className="ml-2">Twitter</span>
-                          </TwitterShareButton>
-                        </DropdownItem>
-
-                        <DropdownItem key="reddit" className="cursor-pointer">
-                          <RedditShareButton
-                            url={shareUrl}
-                            title={title}
-                            className="Demo__some-network__share-button flex items-center"
-                          >
-                            <RedditIcon size={32} round />
-                            <span className="ml-2">Reddit</span>
-                          </RedditShareButton>
-                        </DropdownItem>
-                        <DropdownItem key="email" className="cursor-pointer">
-                          <EmailShareButton
-                            url={shareUrl}
-                            title={title}
-                            className="Demo__some-network__share-button flex items-center"
-                          >
-                            <EmailIcon size={32} round />
-                            <span className="ml-2">Email </span>
-                          </EmailShareButton>
-                        </DropdownItem>
-                      </DropdownMenu>
-                    </Dropdown>
-
-                    <Dropdown>
-                      <DropdownTrigger>
-                        <Button size="sm" className="p-1">
-                          <TbDots className="text-default-500 pointer-events-none flex-shrink-0" />
-                        </Button>
-                      </DropdownTrigger>
-                      <DropdownMenu
-                        variant="faded"
-                        aria-label="Dropdown menu with icons"
-                      >
-                        <DropdownItem
-                          onClick={() => handleDownload(item.img, item.name)}
-                          startContent={
-                            <GoDownload className="text-default-500 pointer-events-none flex-shrink-0" />
-                          }
+                            <FaShareAlt className="text-sm pointer-events-none flex-shrink-0" />
+                          </Button>
+                        </DropdownTrigger>
+                        <DropdownMenu
+                          variant="faded"
+                          aria-label="Static Actions"
                         >
-                          Download
-                        </DropdownItem>
-                        <DropdownItem
-                          key="logout"
-                          className="text-danger"
-                          color="danger"
-                          startContent={<MdOutlineReport />}
+                          <DropdownItem
+                            key="facebook"
+                            className="cursor-pointer"
+                          >
+                            <FacebookShareButton
+                              url={shareUrl}
+                              title={title}
+                              className="flex items-center"
+                            >
+                              <FacebookIcon size={32} round />
+                              <span className="ml-2">Facebook</span>
+                            </FacebookShareButton>
+                          </DropdownItem>
+
+                          <DropdownItem
+                            key="whatsapp"
+                            className="cursor-pointer"
+                          >
+                            <WhatsappShareButton
+                              url={shareUrl}
+                              title={title}
+                              className="flex items-center"
+                            >
+                              <WhatsappIcon size={32} round />
+                              <span className="ml-2">Whatsapp</span>
+                            </WhatsappShareButton>
+                          </DropdownItem>
+
+                          <DropdownItem key="x" className="cursor-pointer">
+                            <TwitterShareButton
+                              url={shareUrl}
+                              title={title}
+                              className="flex items-center"
+                            >
+                              <TwitterIcon size={32} round />
+                              <span className="ml-2">Twitter</span>
+                            </TwitterShareButton>
+                          </DropdownItem>
+
+                          <DropdownItem key="reddit" className="cursor-pointer">
+                            <RedditShareButton
+                              url={shareUrl}
+                              title={title}
+                              className="flex items-center"
+                            >
+                              <RedditIcon size={32} round />
+                              <span className="ml-2">Reddit</span>
+                            </RedditShareButton>
+                          </DropdownItem>
+                          <DropdownItem key="email" className="cursor-pointer">
+                            <EmailShareButton
+                              url={shareUrl}
+                              title={title}
+                              className="flex items-center"
+                            >
+                              <EmailIcon size={32} round />
+                              <span className="ml-2">Email </span>
+                            </EmailShareButton>
+                          </DropdownItem>
+                        </DropdownMenu>
+                      </Dropdown>
+
+                      <Dropdown>
+                        <DropdownTrigger>
+                          <Button
+                            size="sm"
+                            className="p-1 transition-all duration-300 ease-in-out bg-gray-300 hover:bg-gray-400 rounded-full shadow hover:shadow-lg"
+                          >
+                            <FaEllipsisV className="text-gray-800 pointer-events-none flex-shrink-0" />
+                          </Button>
+                        </DropdownTrigger>
+                        <DropdownMenu
+                          variant="faded"
+                          aria-label="Dropdown menu with icons"
                         >
-                          Report
-                        </DropdownItem>
-                      </DropdownMenu>
-                    </Dropdown>
-                  </div>
-                </CardFooter>
-              </Card>
+                          <DropdownItem
+                            onClick={() => handleDownload(item.img, item.name)}
+                            startContent={
+                              <FaDownload className="text-default-500 pointer-events-none flex-shrink-0" />
+                            }
+                          >
+                            Download
+                          </DropdownItem>
+                          <DropdownItem
+                            key="logout"
+                            className="text-danger"
+                            color="danger"
+                            startContent={<FaExclamationTriangle />}
+                          >
+                            Report
+                          </DropdownItem>
+                        </DropdownMenu>
+                      </Dropdown>
+                    </div>
+                  </CardFooter>
+                </Card>
+              </Tooltip>
             ))}
           </div>
         ))}
       </div>
     </div>
   );
-}
+};
+
+export default MoreArt;
