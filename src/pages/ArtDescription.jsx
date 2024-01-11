@@ -35,7 +35,9 @@ const ArtDescription = () => {
               <h2 className="text-3xl font-bold text-gray-800">
                 {artItem.name}
               </h2>
-              <p className="text-sm text-gray-600 mt-1">by {artItem.artist}</p>
+              <p className="text-sm text-gray-600 mt-1">
+                by {artItem.artistInfo.name}
+              </p>
             </div>
           </CardHeader>
 

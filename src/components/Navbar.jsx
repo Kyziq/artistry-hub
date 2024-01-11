@@ -25,12 +25,20 @@ const SearchAutocomplete = ({ allLists }) => {
     }
   };
 
-  const itemToString = (item) => (item ? `${item.name} - ${item.artist}` : '');
+  const itemToString = (item) => {
+    return item ? `${item.name} - ${item.artistInfo.name}` : '';
+  };
+
+  const filterItems = (item, query) => {
+    const searchString = `${item.name} ${item.artistInfo.name}`.toLowerCase();
+    return searchString.includes(query.toLowerCase());
+  };
 
   return (
     <Autocomplete
       defaultItems={allLists}
       aria-label="Search for Artworks"
+      filterItems={filterItems}
       classNames={{
         base: 'max-w-lg',
         listboxWrapper: 'max-h-[320px]',
@@ -85,7 +93,7 @@ const SearchAutocomplete = ({ allLists }) => {
               <div className="flex flex-col">
                 <span className="text-small">{item.name}</span>
                 <span className="text-tiny text-default-400">
-                  {item.artist}
+                  {item.artistInfo.name}
                 </span>
               </div>
             </div>
