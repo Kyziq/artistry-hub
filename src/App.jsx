@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { Spinner } from '@nextui-org/react';
 
 // Lazy loading of route components
 const Home = lazy(() => import('./pages/Home'));
@@ -16,7 +17,13 @@ function App() {
         <Navbar />
 
         {/* Suspense fallback during lazy loading */}
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense
+          fallback={
+            <div className="flex justify-center items-center h-screen fixed top-0 left-0 w-full bg-gray-100">
+              <Spinner size="lg" />
+            </div>
+          }
+        >
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/top-picks" element={<TopPicks />} />
