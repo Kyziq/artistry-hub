@@ -18,7 +18,7 @@ const Top = () => {
         </h2>
         <p className="text-md mb-6 text-center max-w-2xl">
           Dive into a curated selection of our most celebrated artworks, ranked
-          by community love. These top 10 picks, brimming with creativity and
+          by community love. These top 9 picks, brimming with creativity and
           artistry, have captivated the hearts of our audience. Discover what
           makes these pieces stand out in the world of art, each resonating with
           a unique story and aesthetic appeal, and see why they&apos;ve earned
