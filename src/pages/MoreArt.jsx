@@ -37,8 +37,7 @@ const MoreArt = () => {
   const [savedStates, setSavedStates] = useState({});
   const [shuffledLists, setShuffledLists] = useState([]);
   const shareUrl = 'https://kyziq.github.io/artistry-hub/';
-  const title = 'Artistry-Hub';
-  const fixedWidth = '250px';
+  const title = 'ArtistryHub';
 
   const toggleSaveState = (index) => {
     setSavedStates((prevState) => ({
@@ -89,12 +88,7 @@ const MoreArt = () => {
               shadow="sm"
               isPressable
               onClick={() => handleImageClick(item.id)}
-              className="relative overflow-hidden inline-block group transition-opacity duration-300 hover:opacity-90"
-              style={{
-                margin: '0 0 1.5em',
-                width: fixedWidth,
-                height: '100%',
-              }}
+              className="relative overflow-hidden inline-block group transition-opacity duration-300 hover:opacity-90 sm:w-[calc(33.3333%-2em)] md:w-[calc(25%-2em)] lg:w-[calc(20%-2em)]"
             >
               <CardHeader className="absolute z-10 top-1 right-1 flex justify-end items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <Button
