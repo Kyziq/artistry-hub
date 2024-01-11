@@ -37,13 +37,9 @@ const FlagImage = ({ countryCode }) => {
 
 const ArtInfo = ({ artItem }) => (
   <Card className="shadow-xl rounded-lg">
-    <CardHeader className="mb-1">
-      <div>
-        <h2 className="text-3xl font-bold text-gray-800">{artItem.name}</h2>
-        <p className="text-sm text-gray-600 mt-1">
-          by {artItem.artistInfo.name}
-        </p>
-      </div>
+    <CardHeader className="mb-1 flex flex-col items-center text-center">
+      <h2 className="text-3xl font-bold text-gray-800">{artItem.name}</h2>
+      <p className="text-sm text-gray-600 mt-1">by {artItem.artistInfo.name}</p>
     </CardHeader>
     <CardBody className="space-y-4">
       <p className="text-gray-700">{artItem.description}</p>
@@ -67,9 +63,10 @@ const ArtInfo = ({ artItem }) => (
     </CardBody>
   </Card>
 );
+
 const ArtistDetails = ({ artistInfo }) => (
   <Card className="shadow-xl rounded-lg">
-    <CardHeader className="mb-1 flex items-center space-x-4">
+    <CardHeader className="mb-1 flex flex-col items-center justify-center space-y-4">
       <Image
         src={artistInfo.imageUrl}
         alt={artistInfo.name}
@@ -80,7 +77,7 @@ const ArtistDetails = ({ artistInfo }) => (
       />
       <div>
         <h2 className="text-3xl font-bold text-gray-800">{artistInfo.name}</h2>
-        <div className="flex items-center">
+        <div className="flex items-center justify-center">
           {artistInfo.nationality}
           <FlagImage countryCode={artistInfo.countryCode} />
         </div>
@@ -92,10 +89,12 @@ const ArtistDetails = ({ artistInfo }) => (
         <span className="font-semibold">Birth Year: </span>
         {artistInfo.birthYear}
       </p>
-      <p>
-        <span className="font-semibold">Death Year: </span>
-        {artistInfo.deathYear || 'N/A'}
-      </p>
+      {artistInfo.deathYear && (
+        <p>
+          <span className="font-semibold">Death Year: </span>
+          {artistInfo.deathYear}
+        </p>
+      )}
       <p>
         <span className="font-semibold">Notable Works: </span>
         {artistInfo.notableWorks.join(', ')}
