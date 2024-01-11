@@ -55,11 +55,13 @@ const ArtInfo = ({ artItem }) => (
         <span className="font-semibold">Dimensions: </span>
         {artItem.dimensions}
       </p>
-      <div className="flex items-center">
+      <p>
         <span className="font-semibold">Location: </span>
-        <span className="ml-2">{artItem.location}</span>
-        <FlagImage countryCode={artItem.countryCode} />
-      </div>
+        {artItem.location}
+        <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+          <FlagImage countryCode={artItem.countryCode} />
+        </span>
+      </p>
     </CardBody>
   </Card>
 );
