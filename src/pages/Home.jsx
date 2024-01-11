@@ -6,15 +6,13 @@ import { FaArrowRight } from 'react-icons/fa';
 const Home = () => {
   return (
     <div className="p-4 sm:p-6">
-      <div className="flex flex-wrap justify-between items-center">
-        <header className="text-xl sm:text-2xl font-bold mb-2 sm:mb-0">
-          ArtistryHub.
-        </header>
+      <div className="flex justify-between items-center">
+        <header className="text-xl sm:text-2xl font-bold">ArtistryHub.</header>
         <Link
           to="/top-picks"
-          className="flex items-center text-sm sm:text-lg font-medium text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out"
+          className="flex items-center text-sm sm:text-lg font-medium text-blue-500 hover:text-blue-800 transition duration-300 ease-in-out"
         >
-          Explore Featured Artworks{' '}
+          Explore Featured Artworks
           <FaArrowRight className="ml-1 sm:ml-2 text-base sm:text-lg" />
         </Link>
       </div>
