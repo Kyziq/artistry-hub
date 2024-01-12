@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import { Spinner } from '@nextui-org/react';
 
 // Lazy loading of route components
@@ -32,9 +31,6 @@ function App() {
           </Routes>
         </Suspense>
       </Router>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }
