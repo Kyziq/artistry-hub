@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import { Spinner } from '@nextui-org/react';
@@ -12,7 +12,7 @@ const ErrorPage = lazy(() => import('./pages/Error'));
 function App() {
   return (
     <div className="flex flex-col justify-start items-start min-h-screen bg-gray-100">
-      <Router basename="/artistry-hub/">
+      <Router>
         <Navbar />
 
         {/* Suspense fallback during lazy loading */}
