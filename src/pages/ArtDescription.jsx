@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { allLists } from '../data/list';
 import {
   Card,
@@ -7,7 +7,10 @@ import {
   Image,
   Tabs,
   Tab,
+  Breadcrumbs,
+  BreadcrumbItem,
 } from '@nextui-org/react';
+import { FaHome, FaPaintBrush } from 'react-icons/fa';
 
 const getArtItemById = (id) => {
   for (const listKey in allLists) {
@@ -115,6 +118,31 @@ const ArtDescription = () => {
   return (
     <div className="flex flex-col md:flex-row p-4 gap-6">
       <div className="flex-1">
+        <Breadcrumbs
+          color="primary"
+          variant="solid"
+          underline="hover"
+          radius="lg"
+          className="flex flex-wrap text-sm md:text-base"
+        >
+          <BreadcrumbItem className="mr-2">
+            <Link
+              to="/"
+              reloadDocument
+              className="flex items-center space-x-1 text-blue-600 hover:text-blue-800 focus:text-blue-800"
+            >
+              <FaHome className="text-lg" />
+              <span>Home</span>
+            </Link>
+          </BreadcrumbItem>
+          <BreadcrumbItem>
+            <div className="flex items-center space-x-1">
+              <FaPaintBrush className="text-md text-gray-600" />
+              <span className="text-gray-600">{artItem.name}</span>
+            </div>
+          </BreadcrumbItem>
+        </Breadcrumbs>
+
         <Image
           src={artItem.img}
           alt={artItem.name}
