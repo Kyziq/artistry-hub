@@ -76,13 +76,7 @@ const MoreArt = () => {
     <div className="mt-10">
       <div className="flex flex-wrap justify-center items-center gap-4 mt-4">
         {shuffledLists.map((item, index) => (
-          <Tooltip
-            key={index}
-            content={item.name}
-            placement="top"
-            color="foreground"
-            showArrow
-          >
+          <Tooltip key={index} content={item.name} placement="top" showArrow>
             <Card
               key={index}
               shadow="sm"

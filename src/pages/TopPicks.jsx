@@ -1,10 +1,9 @@
-import { Image } from '@nextui-org/react';
+import { Image, Tooltip } from '@nextui-org/react';
 import { Link } from 'react-router-dom';
 import { allLists } from '../data/list';
 import { FaHeart } from 'react-icons/fa';
 
 const Top = () => {
-  // Combine all lists and sort by 'likes' in descending order
   const sortedList = Object.values(allLists)
     .flat()
     .sort((a, b) => b.likes - a.likes)
@@ -26,27 +25,34 @@ const Top = () => {
         </p>
         <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-4">
           {sortedList.map((item) => (
-            <div key={item.id} className="flex flex-col items-center">
-              <Link to={`/art/${item.id}`}>
-                <Image
-                  src={item.img}
-                  alt={item.name}
-                  className="w-full sm:w-48 sm:h-48 rounded-lg overflow-hidden bg-white shadow-md border border-gray-300 mb-2 object-cover"
-                />
-              </Link>
-              <h3 className="font-semibold text-lg mb-2">{item.name}</h3>
-              <p className="flex items-center text-sm text-gray-600">
-                <span className="ml-1 inline-flex items-center text-red-500">
-                  <FaHeart />
-                </span>
-                &nbsp;
-                {item.likes}
-              </p>
-            </div>
+            <Tooltip
+              key={item.id}
+              content="Click to discover the story and artist behind this masterpiece"
+              placement="top"
+            >
+              <div className="flex flex-col items-center">
+                <Link to={`/art/${item.id}`}>
+                  <Image
+                    src={item.img}
+                    alt={item.name}
+                    className="w-full sm:w-48 sm:h-48 rounded-lg overflow-hidden bg-white shadow-md border border-gray-300 mb-2 object-cover"
+                  />
+                </Link>
+                <h3 className="font-semibold text-lg mb-2">{item.name}</h3>
+                <p className="flex items-center text-sm text-gray-600">
+                  <span className="ml-1 inline-flex items-center text-red-500">
+                    <FaHeart />
+                  </span>
+                  &nbsp;
+                  {item.likes}
+                </p>
+              </div>
+            </Tooltip>
           ))}
         </div>
       </div>
     </div>
   );
 };
+
 export default Top;
